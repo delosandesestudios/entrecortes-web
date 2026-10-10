@@ -30,7 +30,12 @@ No hay que volver a crear nada ni tocar la configuración de Vercel.
 
 ## Versiones
 
-- **v9 (actual):** grano de película y viñeta cinematográfica en todo el sitio,
+- **v10 (actual):** SEO local (titulares y datos estructurados), imagenes en WebP
+  (26% mas livianas), boton flotante de cotizacion, pestanas del menu con contador
+  y 4 platos por vista, adicionales avanzados en un desplegable, fecha del mensaje
+  en palabras, contraste corregido en movil y galeria de eventos en testimonios.
+  Incluye `lab.html`, el laboratorio de efectos, y `og.jpg` para las vistas previas.
+- **v9:** grano de película y viñeta cinematográfica en todo el sitio,
   el sello se estampa en la portada al cargar, las secciones aparecen con un
   fundido al bajar, y visor de fotos a pantalla completa en la galería.
   Respeta la preferencia del sistema "reducir movimiento".
