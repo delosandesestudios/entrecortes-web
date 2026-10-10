@@ -4,6 +4,8 @@ Sitio de una sola página, autocontenido: el archivo `index.html` ya trae las
 tipografías (Ultra + Montserrat), las fotos y todo el código dentro.
 No necesita servidor, ni base de datos, ni dependencias.
 
+**En vivo:** https://entrecortes-web.vercel.app
+
 ## Qué contiene
 
 - Portada, servicios, paquetes, menú a la carta, cotizador, eventos,
@@ -13,28 +15,27 @@ No necesita servidor, ni base de datos, ni dependencias.
   WhatsApp con la palabra COTIZAR.
 - Dos líneas de WhatsApp: 0424-781.7241 (principal) y 0414-720.1370 (alterna).
 
-## Publicar en Vercel (2 formas)
+## Cómo se publica
 
-### A. Desde la web (la más fácil, sin instalar nada)
+El repositorio está conectado a Vercel. Para actualizar la web:
 
-1. Entra a https://github.com y crea una cuenta (o inicia sesión).
-2. Arriba a la derecha: **New repository**. Nombre: `entrecortes-web`.
-   Déjalo público y pulsa **Create repository**.
-3. En el repositorio: **Add file → Upload files**. Arrastra `index.html`
-   (y este README.md). Pulsa **Commit changes**.
-4. Entra a https://vercel.com y pulsa **Sign up → Continue with GitHub**.
-5. En Vercel: **Add New… → Project → Import** el repositorio
-   `entrecortes-web` → **Deploy**.
-6. En menos de un minuto te da una dirección tipo
-   `entrecortes-web.vercel.app`. Esa es la web, ya en internet.
+1. Se cambia `index.html`.
+2. Se sube el cambio al repositorio (`git push`).
+3. Vercel publica la nueva versión en uno o dos minutos.
 
-### B. Con la terminal (si alguien del equipo prefiere)
+- Repositorio: https://github.com/delosandesestudios/entrecortes-web
+- Panel de Vercel: https://vercel.com/delosandesestudios-7637s-projects/entrecortes-web
 
-```bash
-npm i -g vercel
-vercel login
-vercel --prod
-```
+No hay que volver a crear nada ni tocar la configuración de Vercel.
+
+## Versiones
+
+- **v9 (actual):** grano de película y viñeta cinematográfica en todo el sitio,
+  el sello se estampa en la portada al cargar, las secciones aparecen con un
+  fundido al bajar, y visor de fotos a pantalla completa en la galería.
+  Respeta la preferencia del sistema "reducir movimiento".
+- **v8:** primera versión publicada. Blanco y negro puro, titulares en Ultra y
+  texto en Montserrat, fotos y testimonios reales tomados del Instagram.
 
 ## Cambiar contenido más adelante
 
