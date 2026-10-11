@@ -43,7 +43,7 @@
   --maxw:1120px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{margin:0;background:var(--ink);color:var(--paper);font:16px/1.62 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::after{content:"";position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.13;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -87,6 +87,9 @@ a{color:inherit}
 .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-top:1px solid var(--line);margin-top:44px;padding-top:18px}
 .hero-stats div strong{display:block;font-family:var(--display);font-size:clamp(20px,3.2vw,30px);letter-spacing:.02em}
 .hero-stats div span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim2)}
+/* deja libre la esquina inferior derecha donde flota el boton de WhatsApp */
+@media(min-width:881px){.hero-stats{max-width:calc(100% - 300px)}}
+@media(max-width:880px){.hero-stats{padding-right:76px}}
 @media(max-width:700px){
   .hero-bg::after{background:linear-gradient(180deg,rgba(10,10,10,.86) 0%,rgba(10,10,10,.72) 45%,#0a0a0a 96%)}
   .hero-in{min-height:auto;padding:44px 20px 28px}
@@ -396,6 +399,11 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
 @keyframes totPop{0%{transform:scale(1)}40%{transform:scale(1.16)}100%{transform:scale(1)}}
 @media(prefers-reduced-motion:reduce){.item.pop,.add-fly.go,.item-add.done,.xmain.done,.summary.flash,.mbar .m-tot.flash{animation:none}}
 /* arreglos para pantallas chicas */
+@media(max-width:880px){
+  .wafloat{right:12px;bottom:88px;width:56px;height:56px;padding:0;justify-content:center}
+  .wafloat .wlab{display:none}
+  .wafloat svg{width:24px;height:24px}
+}
 @media(max-width:560px){
   .nav-in{padding:0 14px;gap:10px;height:60px}
   .brand{gap:8px;min-width:0}
@@ -1056,11 +1064,13 @@ function render(){
   document.getElementById("sum-key").innerHTML = t.protG
     ? '<span>Proteína estimada<em>' + t.protG + ' g por plato · ' + ((t.protG >= 350 && t.protG <= 450) ? "dentro del rango recomendado" : "revisar: rango recomendado 350–450 g") + '</em></span><span>' + kg(t.protG, state.guests) + '</span>'
     : '';
-  document.getElementById("sum-total").textContent = money0(t.total);
+  document.getElementById("sum-total").textContent = t.total ? money0(t.total) : "—";
   document.getElementById("sum-per").innerHTML = t.total
-    ? "≈ " + money(t.total / state.guests) + " por plato<br>" + state.guests + " invitados"
+    ? (t.count
+        ? "≈ " + money(t.total / state.guests) + " por plato<br>" + state.guests + " invitados"
+        : "solo adicionales<br>" + state.guests + " invitados")
     : "Elige tu menú<br>para ver el estimado";
-  document.getElementById("m-total").textContent = money0(t.total);
+  document.getElementById("m-total").textContent = t.total ? money0(t.total) : "—";
 
   var msg = ["COTIZAR — EntreCortes",
     "Fecha: " + fechaLarga(document.getElementById("date").value),
@@ -1070,7 +1080,7 @@ function render(){
   if(t.protG) msg.push("Proteína estimada: " + kg(t.protG, state.guests) + " (" + t.protG + " g por plato)");
   if(t.xlines.length) msg.push("Adicionales: " + t.xlines.map(function(l){ return l.name; }).join(", "));
   if (t.total > 0) {
-    msg.push("Estimado: " + money0(t.total) + " (≈ " + money(t.total / state.guests) + " por plato)");
+    msg.push("Estimado: " + money0(t.total) + (t.count ? " (≈ " + money(t.total / state.guests) + " por plato)" : " (solo adicionales, sin menú)"));
   } else {
     msg.push("Quiero una cotización para mi evento.");
   }
@@ -1098,7 +1108,7 @@ renderPkgs(); renderMenu(); render();
   }
   // visor de fotos de la galería
   var lb = document.getElementById('lb'), img = lb.querySelector('img'), cap = lb.querySelector('span');
-  document.querySelectorAll('.gal figure img').forEach(function(im){
+  document.querySelectorAll('.gal figure img, .trust-gal img').forEach(function(im){
     im.addEventListener('click', function(){
       img.src = im.currentSrc || im.src;
       cap.textContent = (im.closest('figure').querySelector('figcaption')||{}).textContent || '';
