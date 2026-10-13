@@ -508,6 +508,13 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
 @media(max-width:680px){.modalities{grid-template-columns:1fr}.xrow{grid-template-columns:1fr auto;gap:12px}.xrow .xmain{grid-column:1/-1}.xrow .xprice{justify-self:start}.xrow .xqty{grid-column:2}.xrow .xqty button{width:44px}}
 
 .item-top{flex-wrap:wrap}.item-name{flex:0 0 100%}.item-price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.item-price small{text-align:left;margin-top:0;max-width:none}
+
+/* A reserved contact dock prevents the floating chef from obscuring actions. */
+@media(min-width:761px){
+ body{padding-bottom:120px}
+ .mbar{display:flex;height:104px;padding:16px 352px 16px 24px;justify-content:flex-start;gap:32px;background:#0D0D0D;z-index:78}
+ .chef-float{bottom:14px}
+}
 </style>
 </head>
 <body>
@@ -570,7 +577,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
           <li>Precio base: <b>$20 por plato</b>.</li>
           <li>Experiencia en eventos de hasta <b>4.000 invitados</b>.</li>
           <li>Cocina con barriles ahumadores de <a href="https://www.instagram.com/ahumadores.nomadas/" target="_blank" rel="noopener">Nómadas Grills</a>, fabricados en Táchira.</li>
-          <li>Menú completo: entradas, platos fuertes, acompañantes y ensaladas.</li>
+          <li>Menú completo: entradas, platos fuertes, guarniciones, ensaladas y salsas.</li>
         </ul>
       </div>
     </div>
@@ -626,7 +633,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
     <article class="time-feature">
       <div class="time-visual"><img src="img/svc3.webp" srcset="img/svc3-480.webp 480w, img/svc3.webp 900w" sizes="(max-width:880px) 100vw, 560px" width="900" height="675" alt="Carnes de EntreCortes preparadas al fuego" loading="lazy"><span class="time-badge">La más solicitada</span><div class="time-caption"><span>Una experiencia en secuencia</span><h3>Cinco tiempos</h3></div></div>
       <div class="time-detail"><p class="eyebrow">Del fuego a tu mesa</p><p class="time-lede">Cinco momentos para compartir el asado. El chef te ayuda a definir la selección para tu evento.</p>
-        <dl class="time-specs"><div><dt>Proteínas y cortes</dt><dd>Selección a confirmar con el chef.</dd></div><div><dt>Guarniciones</dt><dd>Opciones y cantidades a confirmar según el menú.</dd></div><div><dt>Precio por persona</dt><dd>Consultar según la selección.</dd></div><div><dt>Mínimo de invitados</dt><dd>Consultar para esta modalidad.</dd></div></dl>
+        <dl class="time-specs"><div><dt>Proteínas y cortes</dt><dd>Preparaciones al barril, al grill y ahumadas. Los cortes se confirman con el chef.</dd></div><div><dt>Guarniciones</dt><dd>Papas bravas, puré de papa, yuca asada, papitas fritas, tostones, tostones al ajillo, papa amarilla, yuca frita y arepitas. Selección y cantidades según el menú acordado.</dd></div><div><dt>Precio por persona</dt><dd>Consultar según la selección.</dd></div><div><dt>Mínimo de invitados</dt><dd>Consultar para esta modalidad.</dd></div></dl>
         <button class="btn" id="choose-tiempos" type="button" data-mode="tiempos">Elegir cinco tiempos y cotizar</button><p class="hint">El chef confirma los cortes, las guarniciones, el mínimo y el precio antes de reservar.</p>
       </div>
     </article>
@@ -636,13 +643,13 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
     <div class="sec-head">
       <span class="num">04</span>
       <h2>Menú a la carta para tu evento</h2>
-      <span class="note">Entradas opcionales<br>con precio propio</span>
+      <span class="note">Elige tu selección<br>con ayuda del chef</span>
     </div>
     <div class="tabs" role="tablist" aria-label="Categorías del menú" id="tabs"></div>
     <p class="entry-note" id="entry-note">Entradas opcionales: elige cada una por separado. Los precios son por unidad o por bandeja, no por invitado. Consulta los mínimos de pedido.</p>
     <div class="menu-grid" id="menu-grid"></div>
     <button type="button" class="menu-more" id="menu-more"></button>
-    <p class="hint">Precios en USD. Cada ficha indica su unidad de venta. Platos fuertes, acompañantes y ensaladas conservan precios de referencia, sujetos a confirmación del chef.</p>
+    <p class="hint">Precios en USD. Cada ficha indica su unidad de venta. Los platos fuertes conservan precios de referencia. Guarniciones, ensaladas y salsas: selección, cantidades e inclusión en el servicio a confirmar con el chef.</p>
   </section>
 
   <section class="section" id="cotizador" style="padding-top:30px">
@@ -802,7 +809,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
           <li>Acompañantes y ensaladas acordados en la cotización</li>
           <li>Estación de fuego montada en tu evento</li>
           <li>Carbón, leña y gas</li>
-          <li>Salsas de la casa</li>
+          <li>Salsas acordadas según el menú contratado</li>
           <li>Equipo de cocina, parrilleros y ahumadores</li>
         </ul>
       </div>
@@ -828,7 +835,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
     </div>
     <details open><summary>¿Cuánto cuesta por plato?</summary><p>Desde $20 por plato en platos fuertes. El precio final depende del menú elegido, el número de invitados y la ciudad donde se realice el evento.</p></details>
     <details><summary>¿Cuál es el mínimo de invitados?</summary><p>El servicio por plato comienza en 20 personas. Las hamburguesadas requieren al menos 30 unidades y los chili dogs, 50. En asados por tiempos y entradas, consulta el mínimo específico con el chef.</p></details>
-    <details><summary>¿Qué incluye el precio por plato?</summary><p>El plato fuerte con sus acompañantes y ensaladas según el menú, el montaje de la estación de fuego, carbón y leña, salsas de la casa y el equipo de cocina. Las entradas son opcionales y tienen precio propio; mesoneros y platería se cotizan aparte. En solo parrillero, el cliente aporta los ingredientes.</p></details>
+    <details><summary>¿Qué incluye el precio por plato?</summary><p>El plato fuerte con sus acompañantes y ensaladas según el menú, el montaje de la estación de fuego, carbón y leña, salsas de la casa y el equipo de cocina. Las entradas son opcionales y tienen precio propio. Guarniciones, ensaladas y salsas se acuerdan según el menú; mesoneros y platería se cotizan aparte. En solo parrillero, el cliente aporta los ingredientes.</p></details>
     <details><summary>¿Hasta dónde se trasladan?</summary><p>La base es San Cristóbal y cubrimos todo Táchira y otras ciudades de Venezuela. El traslado y los viáticos se calculan según distancia.</p></details>
     <details><summary>¿Con cuánta anticipación reservo?</summary><p>Idealmente 15 días antes. En temporada de graduaciones, Navidad y fin de año, 30 días o más, porque las fechas se llenan.</p></details>
     <details><summary>¿Atienden eventos de empresa?</summary><p>Sí. Hacemos desayunos, brunchs, picoteos, coffee breaks y celebraciones corporativas, con entrega puntual y montaje eficiente.</p></details>
@@ -945,23 +952,193 @@ var MENU = {
     {id:"picana", name:"Picaña premium", desc:"Corte de primera, servicio en tabla.", price:28, per:{g:350}}
   ],
   acompanantes: [
-    {id:"arroz", name:"Arroz", desc:"Blanco o con vegetales.", price:3, per:{g:180}},
-    {id:"caraotas", name:"Caraotas negras", desc:"Guiso de la casa.", price:3, per:{g:180}},
-    {id:"papas", name:"Papas rústicas", desc:"Con romero y sal.", price:3.5, per:{g:180}},
-    {id:"pureyuca", name:"Puré de yuca", desc:"Con queso.", price:3.5, per:{g:180}},
-    {id:"yuca", name:"Yuca frita", desc:"Con salsa de la casa.", price:3.5, per:{g:180}},
-    {id:"maduro", name:"Plátano maduro", desc:"Asado o frito.", price:3, per:{g:150}},
-    {id:"pan", name:"Pan de ajo", desc:"Horneado al momento.", price:2.5, per:{g:100}},
-    {id:"salsas", name:"Salsas de la casa", desc:"Guasacaca, chimichurri y picante.", price:2, per:{g:40}}
-  ],
+  {
+    "id": "papasbravas",
+    "name": "Papas bravas",
+    "desc": "Papa preparada al estilo brava.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "purepapa",
+    "name": "Puré de papa",
+    "desc": "Puré de papa para acompañar el asado.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "yucaasada",
+    "name": "Yuca asada",
+    "desc": "Yuca preparada al fuego.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "papitasfritas",
+    "name": "Papitas fritas",
+    "desc": "Papa frita como guarnición.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "tostonesguarn",
+    "name": "Tostones",
+    "desc": "Plátano verde como guarnición.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "tostonesajillo",
+    "name": "Tostones al ajillo",
+    "desc": "Tostones preparados al ajillo.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "papaamarilla",
+    "name": "Papa amarilla",
+    "desc": "Consulta la preparación con el chef.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "yucafrita",
+    "name": "Yuca frita",
+    "desc": "Yuca frita como guarnición.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "arepitasguarn",
+    "name": "Arepitas",
+    "desc": "Arepitas para acompañar el asado.",
+    "price": null,
+    "per": {}
+  }
+],
   ensaladas: [
-    {id:"casa", name:"Ensalada de la casa", desc:"Fresca, de temporada.", price:3.5, per:{g:150}},
-    {id:"cesar", name:"Ensalada césar", desc:"Con aderezo de la casa.", price:4.5, per:{g:150}},
-    {id:"asados", name:"Vegetales asados", desc:"A la parrilla, con hierbas.", price:4.5, per:{g:150}},
-    {id:"frutas", name:"Ensalada de frutas", desc:"Frutas de temporada.", price:4, per:{g:150}},
-    {id:"polloens", name:"Ensalada de pollo", desc:"Con pollo ahumado.", price:6, per:{g:180}},
-    {id:"rusa", name:"Ensalada rusa", desc:"Receta de la casa.", price:3.5, per:{g:150}}
-  ]
+  {
+    "id": "vegetalessalteados",
+    "name": "Vegetales salteados",
+    "desc": "Selección de vegetales salteados.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "mango",
+    "name": "Ensalada de mango",
+    "desc": "Ensalada preparada con mango.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "lechugaajoporro",
+    "name": "Lechuga, ajo porro y parmesano",
+    "desc": "Lechuga, ajo porro picado fino y láminas de queso parmesano.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "aguacatefresco",
+    "name": "Aguacate fresco",
+    "desc": "Aguacate fresco como acompañamiento.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "aguacatepalmitos",
+    "name": "Aguacate y palmitos",
+    "desc": "Ensalada de aguacate y palmitos.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "capresa",
+    "name": "Capresa",
+    "desc": "Consulta la presentación con el chef.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "papahuevo",
+    "name": "Papa y huevo",
+    "desc": "Ensalada de papa y huevo.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "pastafria",
+    "name": "Ensalada fría de pasta",
+    "desc": "Pasta servida fría. Consulta la preparación con el chef.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "guacamole",
+    "name": "Guacamole",
+    "desc": "Guacamole para acompañar tu selección.",
+    "price": null,
+    "per": {}
+  }
+],
+  salsas: [
+  {
+    "id": "salsa-chimichurri",
+    "name": "Chimichurri",
+    "desc": "Selección a acordar con el chef según tu menú.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "salsa-pesto",
+    "name": "Pesto",
+    "desc": "Selección a acordar con el chef según tu menú.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "salsa-tartara",
+    "name": "Tártara",
+    "desc": "Selección a acordar con el chef según tu menú.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "salsa-guasacaca",
+    "name": "Guasacaca",
+    "desc": "Selección a acordar con el chef según tu menú.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "salsa-cremaagria",
+    "name": "Crema agria",
+    "desc": "Selección a acordar con el chef según tu menú.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "salsa-criolla",
+    "name": "Salsa criolla",
+    "desc": "Selección a acordar con el chef según tu menú.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "salsa-picante",
+    "name": "Salsa picante",
+    "desc": "Selección a acordar con el chef según tu menú.",
+    "price": null,
+    "per": {}
+  },
+  {
+    "id": "salsa-encurtidocebolla",
+    "name": "Encurtido de cebollas",
+    "desc": "Selección a acordar con el chef según tu menú.",
+    "price": null,
+    "per": {}
+  }
+]
 };
 
 var EXTRAS = [
@@ -989,7 +1166,7 @@ function money0(n){return money(n);}
 function kg(g,n){return (Math.round(g*n/10)/100).toFixed(1).replace('.',',')+' kg';}
 function allItems(){var out=[];Object.keys(MENU).forEach(function(k){MENU[k].forEach(function(it){it.cat=k;out.push(it);});});return out;}
 function itemById(id){return allItems().find(function(it){return it.id===id;});}
-var CATS=[["entradas","Entradas"],["platos","Platos fuertes"],["acompanantes","Acompañantes"],["ensaladas","Ensaladas"]];
+var CATS=[["entradas","Entradas"],["platos","Platos fuertes"],["acompanantes","Guarniciones"],["ensaladas","Ensaladas"],["salsas","Salsas"]];
 document.getElementById('tabs').innerHTML=CATS.map(function(c){return '<button class="tab" role="tab" data-cat="'+c[0]+'" aria-selected="'+(c[0]==='entradas')+'">'+c[1]+'<span class="cnt">'+MENU[c[0]].length+'</span></button>';}).join('');
 document.getElementById('tabs').addEventListener('click',function(e){var b=e.target.closest('.tab');if(!b)return;state.cat=b.dataset.cat;state.all=false;renderMenu();});
 function renderMenu(){
@@ -998,7 +1175,7 @@ function renderMenu(){
  var list=MENU[state.cat],show=state.all?list.length:Math.min(4,list.length);
  document.getElementById('menu-grid').innerHTML=list.slice(0,show).map(function(it){
   var on=!!state.picked[it.id],entry=state.cat==='entradas';
-  var unit=entry?(it.unit==='por confirmar'?'unidad de venta por confirmar':'por '+it.unit):(it.per.g?it.per.g+' g / plato':it.per.u+' piezas / plato');
+  var unit=entry?(it.unit==='por confirmar'?'unidad de venta por confirmar':'por '+it.unit):(it.per.g?it.per.g+' g / plato':(it.per.u?it.per.u+' piezas / plato':'cantidad a confirmar'));
   var price=it.price===null?'<span class="price-consult">Consultar</span>':money(it.price);
   var meta=entry?'<p class="entry-min">'+(it.batch?'Pedido mínimo: 50 unidades (1 bandeja)':'Pedido mínimo: consultar con el chef')+'</p>':'';
   var qty=entry&&on?'<div class="entry-quantity"><label for="qty-'+it.id+'">'+(it.batch?'Bandejas de 50':(it.unit==='por confirmar'?'Cantidad a definir':'Unidades'))+'</label><input type="number" id="qty-'+it.id+'" data-entry-qty="'+it.id+'" inputmode="numeric" min="1" max="4000" value="'+state.picked[it.id]+'"></div>':'';
@@ -1011,7 +1188,7 @@ function flashSummary(){var el=document.querySelector('.summary');el.classList.r
 document.getElementById('menu-grid').addEventListener('click',function(e){
  var button=e.target.closest('[data-item-toggle]');if(!button)return;
  var it=itemById(button.dataset.itemToggle),on=!!state.picked[it.id];
- if(on)delete state.picked[it.id];else {state.picked[it.id]=it.cat==='entradas'?(it.batch||it.unit==='por confirmar'?1:state.guests):1;if(it.cat!=='entradas')setMode('carta',false);}
+ if(on)delete state.picked[it.id];else {state.picked[it.id]=it.cat==='entradas'?(it.batch||it.unit==='por confirmar'?1:state.guests):1;if(it.cat==='platos')setMode('carta',false);}
  renderMenu();render();if(!on)flashSummary();
 });
 document.getElementById('menu-grid').addEventListener('input',function(e){
@@ -1021,7 +1198,7 @@ document.getElementById('menu-grid').addEventListener('input',function(e){
 document.getElementById('menu-grid').addEventListener('change',function(e){var id=e.target.dataset.entryQty;if(!id)return;var v=parseInt(e.target.value,10);state.picked[id]=Math.max(1,Math.min(4000,Number.isFinite(v)?v:1));e.target.value=state.picked[id];render();});
 function setMode(mode,scroll){
  if(!MODES[mode])return;state.mode=mode;document.getElementById('service-mode').value=mode;
- if(mode!=='carta')allItems().forEach(function(it){if(it.cat!=='entradas')delete state.picked[it.id];});
+ if(mode!=='carta')allItems().forEach(function(it){if(it.cat==='platos')delete state.picked[it.id];});
  setGuests(state.guests);renderMenu();render();
  if(scroll){var target=document.getElementById(mode==='carta'?'menu':'cotizador');target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
 }
@@ -1044,8 +1221,8 @@ function total(){
  if(state.mode==='hamburguesas'||state.mode==='chili'){var units=state.mode==='hamburguesas'?'hamburguesas':'chili dogs';var v=m.price*state.guests;food+=v;lines.push({name:m.name,sub:state.guests+' '+units+' × '+money(m.price)+' por unidad',val:v});}
  if(state.mode==='parrillero'){food+=200;lines.push({name:m.name,sub:'Tarifa fija · ingredientes a cargo del cliente',val:200});if(document.getElementById('city').value!=='San Cristóbal'){lines.push({name:'Traslado fuera de San Cristóbal',sub:'Costo adicional según destino',val:null});pending.push('Traslado');}}
  allItems().forEach(function(it){
-  var q=state.picked[it.id];if(!q)return;var entry=it.cat==='entradas';if(!entry&&state.mode!=='carta')return;
-  var sub=entry?(it.batch?q+' bandeja'+(q===1?'':'s')+' de 50 · '+(q*50)+' unidades':(it.unit==='por confirmar'?'Cantidad y presentación a definir':q+' unidades')):it.per.g+' g por plato · '+state.guests+' platos';
+  var q=state.picked[it.id];if(!q)return;var entry=it.cat==='entradas';if(it.cat==='platos'&&state.mode!=='carta')return;
+  var sub=entry?(it.batch?q+' bandeja'+(q===1?'':'s')+' de 50 · '+(q*50)+' unidades':(it.unit==='por confirmar'?'Cantidad y presentación a definir':q+' unidades')):(it.per.g?it.per.g+' g por plato · '+state.guests+' platos':'Selección para '+state.guests+' invitados · cantidad a confirmar');
   var val=it.price===null?null:it.price*(entry?q:state.guests);
   if(entry&&it.min===null){sub+=' · mínimo por confirmar';minPending.push(it.name);}
   if(val===null)pending.push(it.name);else food+=val;
@@ -1080,14 +1257,14 @@ function render(){
  if(t.pending.length)msg.push('Falta cotizar: '+t.pending.join(', ')+'.');
  if(t.minPending.length)msg.push('Confirmar mínimos de entradas: '+t.minPending.join(', ')+'.');
  if(state.mode==='carta')msg.push('Precios del resto del menú y extras sujetos a confirmación.');
- if(state.mode==='tiempos')msg.push('Confirmar las proteínas, los cortes, las guarniciones y el mínimo de invitados para cinco tiempos.');
+ if(state.mode==='tiempos')msg.push('Proteínas al barril, al grill o ahumadas. Confirmar cortes, selección de guarniciones y mínimo de invitados para cinco tiempos.');
  msg.push('Quiero confirmar disponibilidad y la cotización final con el chef.');
  var url='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(msg.join('\n'));
  ['wa','wa2','wa3'].forEach(function(id){var el=document.getElementById(id);if(el){el.href=url;el.target='_blank';el.rel='noopener noreferrer';}});
 }
 
 // marquee
-var strip = ["Entradas","Asados por tiempos","Platos fuertes","Acompañantes","Ensaladas","Ahumados en barril","Coffee breaks","Eventos corporativos","San Cristóbal · Táchira"];
+var strip = ["Entradas","Asados por tiempos","Platos fuertes","Guarniciones","Ensaladas","Salsas de la casa","Al barril · al grill · ahumadas","Coffee breaks","Eventos corporativos","San Cristóbal · Táchira"];
 var piece = strip.map(function(s){ return "<span>" + s + "<i>◆</i></span>"; }).join("");
 document.getElementById("marquee").innerHTML = piece + piece;
 
