@@ -552,7 +552,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
       <a class="btn btn--ghost" href="#menu">Ver el menú</a>
     </div>
     <div class="hero-stats">
-      <div><strong>A tu medida</strong><span>Platos armables</span></div>
+      <div><strong data-pre="$" data-to="20">$20</strong><span>Plato armable por persona</span></div>
       <div><strong data-pre="Hasta " data-to="4000" data-fmt="1">Hasta 4.000</strong><span>Invitados por evento</span></div>
       <div><strong>Ahumadores</strong><span>Barriles Nómadas, en sitio</span></div>
     </div>
@@ -579,7 +579,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
         <h3>Luis Velandia</h3>
         <p>Dueño y chef de EntreCortes. Él está detrás del fuego: selecciona las carnes, define los cortes y cocina en el sitio del evento.</p>
         <ul>
-          <li><b>Platos armables</b>: elige proteínas, guarniciones y ensaladas con el chef.</li>
+          <li><b>Plato armable: $20 por persona</b>, mínimo 20 personas. Incluye una carne, una guarnición, una ensalada y una salsa.</li>
           <li>Experiencia en eventos de hasta <b>4.000 invitados</b>.</li>
           <li>Cocina con barriles ahumadores de <a href="https://www.instagram.com/ahumadores.nomadas/" target="_blank" rel="noopener">Nómadas Grills</a>, fabricados en Táchira.</li>
           <li>Menú completo: entradas, platos fuertes, guarniciones, ensaladas y salsas.</li>
@@ -625,7 +625,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
     <div class="modalities" aria-label="Modalidades de servicio">
       <article class="mod-card"><span class="kicker">01 · Por unidad</span><h3>Hamburguesadas</h3><p class="mod-price">$9 <span>por hamburguesa</span></p><p>Mínimo 30 unidades. Una opción para reunir a todos alrededor del fuego.</p><button class="item-add" data-mode="hamburguesas">Cotizar hamburguesada</button></article>
       <article class="mod-card"><span class="kicker">02 · Por unidad</span><h3>Chili dogs</h3><p class="mod-price">$5 <span>por unidad</span></p><p>Mínimo 50 unidades. Consulta al chef por la opción libanesa.</p><button class="item-add" data-mode="chili">Cotizar chili dogs</button></article>
-      <article class="mod-card"><span class="kicker">03 · Por persona</span><h3>Servicio por plato</h3><p class="mod-price">A tu medida</p><p>Desde 20 personas. El precio depende del menú y del número de invitados.</p><button class="item-add" data-mode="carta">Armar mi menú</button></article>
+      <article class="mod-card"><span class="kicker">03 · Por persona</span><h3>Plato armable</h3><p class="mod-price">$20 <span>por persona</span></p><p>Mínimo 20 personas. Elige una carne, una guarnición, una ensalada y una salsa, o pide ayuda al parrillero.</p><button class="item-add" data-mode="armable">Armar mi plato</button></article>
       <article class="mod-card"><span class="kicker">04 · Tarifa de servicio</span><h3>Solo parrillero</h3><p class="mod-price">$200 <span>en San Cristóbal</span></p><p>El chef lleva parrilla, mesas y equipo. Tú suministras los ingredientes. Traslado fuera de la ciudad, aparte.</p><button class="item-add" data-mode="parrillero">Cotizar al parrillero</button></article>
     </div>
     <p class="zones">Atendemos San Cristóbal, Táriba, La Fría, San Antonio del Táchira, Rubio, Mérida y Cúcuta, y nos trasladamos al resto de Venezuela con viáticos. Parrillero a domicilio, barriles ahumadores y montaje completo para eventos sociales y empresas.</p>
@@ -652,10 +652,11 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
     </div>
     <div class="tabs" role="tablist" aria-label="Categorías del menú" id="tabs"></div>
     <p class="entry-note" id="entry-note">Entradas opcionales: elige cada una por separado. Los precios son por unidad o por bandeja, no por invitado. Consulta los mínimos de pedido.</p>
-    <div class="protein-builder" id="protein-builder" hidden><p>Arma tu plato: elige las proteínas y completa tu selección con guarniciones, ensaladas y salsas. Preparaciones al barril, al grill y ahumadas, según la selección acordada con el chef.</p><div class="protein-filters" id="protein-filters" role="group" aria-label="Tipos de proteína"></div><p class="hint">Elige una o varias opciones para solicitar una cotización. El chef confirma porciones, combinaciones y precio por persona.</p></div>
+    <p class="entry-note" id="armable-note" hidden>Plato armable · $20 por persona · mínimo 20 personas. Incluye una carne, una guarnición, una ensalada y una salsa. El precio se cobra una sola vez por plato.</p>
+    <div class="protein-builder" id="protein-builder" hidden><p>Arma tu plato por $20 por persona: elige una carne, una guarnición, una ensalada y una salsa. Preparaciones al barril, al grill y ahumadas, según la selección acordada con el chef.</p><div class="protein-filters" id="protein-filters" role="group" aria-label="Tipos de proteína"></div><p class="hint">Elige una opción en cada categoría. Mínimo 20 personas. Si no sabes qué elegir, pregúntale al parrillero.</p></div>
     <div class="menu-grid" id="menu-grid"></div>
     <button type="button" class="menu-more" id="menu-more"></button>
-    <p class="hint">Precios en USD. Cada ficha indica su unidad de venta. Platos armables, guarniciones, ensaladas y salsas: selección, cantidades, precio e inclusión en el servicio a confirmar con el chef.</p>
+    <p class="hint">Precios en USD. Cada ficha indica su unidad de venta. Plato armable: $20 por persona, mínimo 20 personas; incluye una carne, una guarnición, una ensalada y una salsa. Las entradas, traslados y extras se cotizan por separado.</p>
   </section>
 
   <section class="section" id="cotizador" style="padding-top:30px">
@@ -668,7 +669,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
       <div>
         <div class="panel">
           <h3>Tu evento</h3>
-          <div class="field mode-field"><label for="service-mode">¿Qué servicio quieres?</label><select id="service-mode"><option value="carta">Menú a la carta</option><option value="tiempos">Asado de cinco tiempos</option><option value="hamburguesas">Hamburguesada · mínimo 30 unidades</option><option value="chili">Chili dogs · mínimo 50 unidades</option><option value="parrillero">Solo parrillero · $200 en San Cristóbal</option></select></div>
+          <div class="field mode-field"><label for="service-mode">¿Qué servicio quieres?</label><select id="service-mode"><option value="carta">Solo entradas / servicio por definir</option><option value="armable">Plato armable · $20 por persona · mínimo 20</option><option value="tiempos">Asado de cinco tiempos</option><option value="hamburguesas">Hamburguesada · mínimo 30 unidades</option><option value="chili">Chili dogs · mínimo 50 unidades</option><option value="parrillero">Solo parrillero · $200 en San Cristóbal</option></select></div>
           <div class="row2">
             <div class="field">
               <span class="lab" id="lab-guests">Invitados</span>
@@ -839,9 +840,9 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
       <span class="num">10</span>
       <h2>Preguntas frecuentes de catering</h2>
     </div>
-    <details open><summary>¿Cuánto cuesta por plato?</summary><p>El precio por plato depende de las proteínas, guarniciones y ensaladas elegidas, del número de invitados y de la ciudad. El chef confirma las cantidades y la cotización final.</p></details>
+    <details open><summary>¿Cuánto cuesta por plato?</summary><p>El plato armable cuesta $20 por persona, mínimo 20 personas. Incluye una carne, una guarnición, una ensalada y una salsa. Las entradas, los traslados y los extras se cotizan aparte. En asados por tiempos, consulta el precio específico.</p></details>
     <details><summary>¿Cuál es el mínimo de invitados?</summary><p>El servicio por plato comienza en 20 personas. Las hamburguesadas requieren al menos 30 unidades y los chili dogs, 50. En asados por tiempos y entradas, consulta el mínimo específico con el chef.</p></details>
-    <details><summary>¿Qué incluye el precio por plato?</summary><p>El plato fuerte con sus acompañantes y ensaladas según el menú, el montaje de la estación de fuego, carbón y leña, salsas de la casa y el equipo de cocina. Las entradas son opcionales y tienen precio propio. Guarniciones, ensaladas y salsas se acuerdan según el menú; mesoneros y platería se cotizan aparte. En solo parrillero, el cliente aporta los ingredientes.</p></details>
+    <details><summary>¿Qué incluye el precio por plato?</summary><p>El plato armable de $20 incluye una carne, una guarnición, una ensalada y una salsa. Puedes elegirlas o pedir ayuda al parrillero. Las entradas son opcionales y se cobran aparte; mesoneros, platería y traslados se cotizan por separado. En solo parrillero, el cliente aporta los ingredientes.</p></details>
     <details><summary>¿Hasta dónde se trasladan?</summary><p>La base es San Cristóbal y cubrimos todo Táchira y otras ciudades de Venezuela. El traslado y los viáticos se calculan según distancia.</p></details>
     <details><summary>¿Con cuánta anticipación reservo?</summary><p>Idealmente 15 días antes. En temporada de graduaciones, Navidad y fin de año, 30 días o más, porque las fechas se llenan.</p></details>
     <details><summary>¿Atienden eventos de empresa?</summary><p>Sí. Hacemos desayunos, brunchs, picoteos, coffee breaks y celebraciones corporativas, con entrega puntual y montaje eficiente.</p></details>
@@ -893,7 +894,7 @@ var MENU = {
     "id": "filetmignon",
     "name": "Filetmignon",
     "desc": "Lomito envuelto en tocineta.",
-    "price": null,
+    "price": 1.8,
     "unit": "unidad",
     "min": null
   },
@@ -923,8 +924,8 @@ var MENU = {
   },
   {
     "id": "hojaldrados",
-    "name": "Pequeños hojaldrados",
-    "desc": "Pedido por bandeja de 50 unidades.",
+    "name": "Tequeños hojaldrados",
+    "desc": "Tequeños hojaldrados por bandeja de 50 unidades.",
     "price": 28,
     "unit": "bandeja de 50",
     "batch": 50,
@@ -933,18 +934,18 @@ var MENU = {
   {
     "id": "morcilla",
     "name": "Morcilla",
-    "desc": "Presentación de 50 unidades. Preparación y precio a confirmar.",
-    "price": null,
+    "desc": "Pedido por bandeja de 50 unidades.",
+    "price": 28,
     "unit": "bandeja de 50",
     "batch": 50,
     "min": 1
   },
   {
     "id": "toston",
-    "name": "Tostón",
-    "desc": "Entrada de plátano verde. Presentación a confirmar con el chef.",
-    "price": null,
-    "unit": "por confirmar",
+    "name": "Tostón con nata y queso",
+    "desc": "Tostón servido con nata y queso.",
+    "price": 1,
+    "unit": "unidad",
     "min": null
   }
 ],
@@ -1334,7 +1335,8 @@ var EXTRAS = [
 
 var state = {cat:"entradas", guests:50, picked:{}, extras:{}, mode:"carta", protein:"res", all:false};
 var MODES = {
-  carta:{name:"Menú a la carta",min:20,label:"Invitados",hint:"Servicio por plato: mínimo 20 personas. Las entradas se piden por separado."},
+  carta:{name:"Entradas a la carta",min:1,label:"Invitados",hint:"Cada entrada se calcula por sus unidades o bandejas. Consulta los mínimos de pedido."},
+  armable:{name:"Plato armable",min:20,label:"Invitados",price:20,hint:"$20 por persona · mínimo 20. Incluye una carne, una guarnición, una ensalada y una salsa. Entradas aparte."},
   tiempos:{name:"Asado de cinco tiempos",min:1,label:"Invitados",hint:"Mínimo y precio por persona: a confirmar con el chef para cinco tiempos."},
   hamburguesas:{name:"Hamburguesada",min:30,label:"Hamburguesas (unidades)",price:9,hint:"Mínimo 30 hamburguesas · $9 por unidad. Las entradas se piden por separado."},
   chili:{name:"Chili dogs",min:50,label:"Chili dogs (unidades)",price:5,hint:"Mínimo 50 unidades · $5 por unidad. Las entradas se piden por separado."},
@@ -1354,14 +1356,14 @@ document.getElementById('protein-filters').addEventListener('click',function(e){
 document.getElementById('tabs').addEventListener('click',function(e){var b=e.target.closest('.tab');if(!b)return;state.cat=b.dataset.cat;state.all=false;renderMenu();});
 function renderMenu(){
  document.querySelectorAll('.tab').forEach(function(t){t.setAttribute('aria-selected',String(t.dataset.cat===state.cat));});
- document.getElementById('entry-note').hidden=state.cat!=='entradas';
+ document.getElementById('entry-note').hidden=state.cat!=='entradas';document.getElementById('armable-note').hidden=state.cat==='entradas';
  var isProtein=state.cat==='platos';document.getElementById('protein-builder').hidden=!isProtein;
  document.getElementById('protein-filters').innerHTML=[['res','Res'],['cerdo','Cerdo'],['pollo','Pollo'],['embutidos','Embutidos']].map(function(g){var count=MENU.platos.filter(function(it){return it.proteinGroup===g[0];}).length;return '<button class="protein-filter" type="button" data-protein="'+g[0]+'" aria-pressed="'+(state.protein===g[0])+'">'+g[1]+' <span>'+count+'</span></button>';}).join('');
  var list=MENU[state.cat];if(isProtein)list=list.filter(function(it){return it.proteinGroup===state.protein;});var show=state.all?list.length:Math.min(4,list.length);
  document.getElementById('menu-grid').innerHTML=list.slice(0,show).map(function(it){
   var on=!!state.picked[it.id],entry=state.cat==='entradas';
   var unit=entry?(it.unit==='por confirmar'?'unidad de venta por confirmar':'por '+it.unit):(it.per.g?it.per.g+' g / plato':(it.per.u?it.per.u+' piezas / plato':'cantidad a confirmar'));
-  var price=it.price===null?'<span class="price-consult">Consultar</span>':money(it.price);
+  var price=!entry?'<span class="price-consult">Incluido</span>':(it.price===null?'<span class="price-consult">Consultar</span>':money(it.price));if(!entry)unit='en el plato de $20';
   var meta=entry?'<p class="entry-min">'+(it.batch?'Pedido mínimo: 50 unidades (1 bandeja)':'Pedido mínimo: consultar con el chef')+'</p>':'';
   var qty=entry&&on?'<div class="entry-quantity"><label for="qty-'+it.id+'">'+(it.batch?'Bandejas de 50':(it.unit==='por confirmar'?'Cantidad a definir':'Unidades'))+'</label><input type="number" id="qty-'+it.id+'" data-entry-qty="'+it.id+'" inputmode="numeric" min="1" max="4000" value="'+state.picked[it.id]+'"></div>':'';
   return '<article class="item'+(on?' is-on':'')+'" data-id="'+it.id+'"><div class="item-top"><span class="item-name">'+it.name+'</span><span class="item-price">'+price+'<small>'+unit+'</small></span></div><p>'+it.desc+'</p>'+meta+qty+'<button type="button" class="item-add" data-item-toggle="'+it.id+'">'+(on?'Quitar de mi cotización':'Añadir a mi cotización')+'</button></article>';
@@ -1373,7 +1375,13 @@ function flashSummary(){var el=document.querySelector('.summary');el.classList.r
 document.getElementById('menu-grid').addEventListener('click',function(e){
  var button=e.target.closest('[data-item-toggle]');if(!button)return;
  var it=itemById(button.dataset.itemToggle),on=!!state.picked[it.id];
- if(on)delete state.picked[it.id];else {state.picked[it.id]=it.cat==='entradas'?(it.batch||it.unit==='por confirmar'?1:state.guests):1;if(it.cat==='platos')setMode('carta',false);}
+ if(on)delete state.picked[it.id];else {
+  if(it.cat==='entradas'){state.picked[it.id]=it.batch?1:state.guests;}
+  else {
+   allItems().forEach(function(other){if(other.cat===it.cat)delete state.picked[other.id];});state.picked[it.id]=1;
+   if(state.mode!=='tiempos')setMode('armable',false);
+  }
+ }
  renderMenu();render();if(!on)flashSummary();
 });
 document.getElementById('menu-grid').addEventListener('input',function(e){
@@ -1383,9 +1391,10 @@ document.getElementById('menu-grid').addEventListener('input',function(e){
 document.getElementById('menu-grid').addEventListener('change',function(e){var id=e.target.dataset.entryQty;if(!id)return;var v=parseInt(e.target.value,10);state.picked[id]=Math.max(1,Math.min(4000,Number.isFinite(v)?v:1));e.target.value=state.picked[id];render();});
 function setMode(mode,scroll){
  if(!MODES[mode])return;state.mode=mode;document.getElementById('service-mode').value=mode;
- if(mode!=='carta')allItems().forEach(function(it){if(it.cat==='platos')delete state.picked[it.id];});
+ if(mode!=='armable'&&mode!=='tiempos')allItems().forEach(function(it){if(it.cat!=='entradas')delete state.picked[it.id];});
+ if(scroll&&mode==='armable'){state.cat='platos';state.all=false;}
  setGuests(state.guests);renderMenu();render();
- if(scroll){var target=document.getElementById(mode==='carta'?'menu':'cotizador');target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
+ if(scroll){var target=document.getElementById((mode==='carta'||mode==='armable')?'menu':'cotizador');target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
 }
 document.querySelectorAll('[data-mode]').forEach(function(b){b.addEventListener('click',function(){setMode(b.dataset.mode,true);});});
 document.getElementById('service-mode').addEventListener('change',function(e){setMode(e.target.value,false);});
@@ -1402,19 +1411,21 @@ document.getElementById('city').addEventListener('change',render);document.getEl
 function total(){
  var lines=[],xlines=[],pending=[],minPending=[],food=0,extrasTotal=0,protG=0;
  var m=MODES[state.mode];
+ if(state.mode==='armable'){food=20*state.guests;lines.push({name:'Plato armable',sub:state.guests+' personas × $20 · una carne, una guarnición, una ensalada y una salsa',val:food});}
  if(state.mode==='tiempos'){lines.push({name:m.name,sub:state.guests+' invitados · precio por persona y mínimo por confirmar',val:null});pending.push(m.name);}
  if(state.mode==='hamburguesas'||state.mode==='chili'){var units=state.mode==='hamburguesas'?'hamburguesas':'chili dogs';var v=m.price*state.guests;food+=v;lines.push({name:m.name,sub:state.guests+' '+units+' × '+money(m.price)+' por unidad',val:v});}
  if(state.mode==='parrillero'){food+=200;lines.push({name:m.name,sub:'Tarifa fija · ingredientes a cargo del cliente',val:200});if(document.getElementById('city').value!=='San Cristóbal'){lines.push({name:'Traslado fuera de San Cristóbal',sub:'Costo adicional según destino',val:null});pending.push('Traslado');}}
+ if(state.mode!=='carta'&&state.mode!=='parrillero'&&document.getElementById('city').value!=='San Cristóbal'){lines.push({name:'Traslado fuera de San Cristóbal',sub:'Costo adicional según destino',val:null});pending.push('Traslado');}
  allItems().forEach(function(it){
-  var q=state.picked[it.id];if(!q)return;var entry=it.cat==='entradas';if(it.cat==='platos'&&state.mode!=='carta')return;
+  var q=state.picked[it.id];if(!q)return;var entry=it.cat==='entradas';if(!entry&&state.mode!=='armable'&&state.mode!=='tiempos')return;
   var sub=entry?(it.batch?q+' bandeja'+(q===1?'':'s')+' de 50 · '+(q*50)+' unidades':(it.unit==='por confirmar'?'Cantidad y presentación a definir':q+' unidades')):(it.per.g?it.per.g+' g por plato · '+state.guests+' platos':'Selección para '+state.guests+' invitados · cantidad a confirmar');
-  var val=it.price===null?null:it.price*(entry?q:state.guests);
+  var included=!entry&&state.mode==='armable';var val=included?0:(it.price===null?null:it.price*(entry?q:state.guests));if(included)sub='Una opción incluida en el plato armable';
   if(entry&&it.min===null){sub+=' · mínimo por confirmar';minPending.push(it.name);}
   if(val===null)pending.push(it.name);else food+=val;
   if(it.cat==='platos'&&it.per.g)protG+=it.per.g;
-  lines.push({name:it.name,sub:sub,val:val});
+  lines.push({name:it.name,sub:sub,val:val,included:included});
  });
- EXTRAS.forEach(function(x){var q=state.extras[x.id]||0;if(!q)return;var val=x.price===null?null:q*x.price;if(val===null)pending.push(x.name);else extrasTotal+=val;xlines.push({name:x.name+(x.qty?' × '+q:''),sub:'Adicional',val:val});});
+ EXTRAS.forEach(function(x){var q=state.extras[x.id]||0;if(!q)return;if(x.id==='traslado'&&state.mode!=='carta'&&document.getElementById('city').value!=='San Cristóbal')return;var val=x.price===null?null:q*x.price;if(val===null)pending.push(x.name);else extrasTotal+=val;xlines.push({name:x.name+(x.qty?' × '+q:''),sub:'Adicional',val:val});});
  return {lines:lines,xlines:xlines,pending:pending,minPending:minPending,food:food,extrasTotal:extrasTotal,total:food+extrasTotal,protG:protG,count:lines.length};
 }
 function render(){
@@ -1426,10 +1437,14 @@ function render(){
  if(adv>0){document.getElementById('xadv').classList.add('on');document.getElementById('xadv-btn').setAttribute('aria-expanded','true');}
  document.querySelectorAll('.xrow').forEach(function(row){var q=state.extras[row.dataset.id]||0;row.classList.toggle('is-on',q>0);var qel=row.querySelector('[data-qty]');if(qel)qel.textContent=q;row.querySelector('.tick i').style.opacity=q>0?'1':'0';});
  document.getElementById('sum-title').textContent=t.count?m.name:(t.xlines.length?'Adicionales seleccionados':'Sin menú seleccionado');
- var html='';t.lines.concat(t.xlines).forEach(function(l){html+='<div class="sum-line"><span>'+l.name+'<em>'+l.sub+'</em></span><span>'+(l.val===null?'Por cotizar':money(l.val))+'</span></div>';});
+ var html='';t.lines.concat(t.xlines).forEach(function(l){html+='<div class="sum-line"><span>'+l.name+'<em>'+l.sub+'</em></span><span>'+(l.included?'Incluido':(l.val===null?'Por cotizar':money(l.val)))+'</span></div>';});
  if(!t.count&&!t.xlines.length)html='<div class="sum-empty">Elige un servicio o añade opciones del menú. Cada entrada se calcula por su propia cantidad.</div>';
  if(t.pending.length)html+='<p class="pending-price">Cotización incompleta: '+t.pending.join(', ')+'. El chef confirma estos importes; no están incluidos en el subtotal.</p>';
  if(t.minPending.length)html+='<p class="pending-min">Mínimos de las entradas seleccionadas: confirmar con el chef.</p>';
+ if(state.mode==='armable'){
+ var missing=[['platos','carne'],['acompanantes','guarnición'],['ensaladas','ensalada'],['salsas','salsa']].filter(function(c){return !allItems().some(function(it){return it.cat===c[0]&&state.picked[it.id];});}).map(function(c){return c[1];});
+ if(missing.length)html+='<p class="pending-min">Por elegir: '+missing.join(', ')+'. Puedes pedir ayuda al parrillero; estas opciones ya están incluidas en los $20.</p>';
+ }
  document.getElementById('sum-lines').innerHTML=html;
  document.getElementById('sum-key').innerHTML=t.protG?'<span>Proteína estimada<em>'+t.protG+' g por plato</em></span><span>'+kg(t.protG,state.guests)+'</span>':'';
  document.querySelector('.summary > .lab').textContent=t.pending.length?'Subtotal conocido':'Tu cotización estimada';
@@ -1437,11 +1452,12 @@ function render(){
  document.getElementById('sum-per').innerHTML=t.pending.length?'No es el total final<br>Hay importes por confirmar':(t.total?'Según unidades y servicios<br>Confirmación final del chef':'Elige tu servicio o menú<br>para cotizar');
  document.getElementById('m-total').textContent=t.total?money(t.total):'—';document.querySelector('.mbar .m-lab').textContent=t.pending.length?'Subtotal conocido':'Estimado';
  var msg=['COTIZAR — EntreCortes','Fecha: '+fechaLarga(document.getElementById('date').value),'Ciudad: '+document.getElementById('city').value,'Servicio: '+m.name,m.label+': '+state.guests];
- t.lines.concat(t.xlines).forEach(function(l){msg.push(l.name+': '+l.sub+' · '+(l.val===null?'precio por confirmar':money(l.val)));});
+ t.lines.concat(t.xlines).forEach(function(l){msg.push(l.name+': '+l.sub+' · '+(l.included?'incluido en el plato de $20':(l.val===null?'precio por confirmar':money(l.val))));});
  if(t.total)msg.push((t.pending.length?'Subtotal conocido (NO es el total final): ':'Estimado: ')+money(t.total));
  if(t.pending.length)msg.push('Falta cotizar: '+t.pending.join(', ')+'.');
  if(t.minPending.length)msg.push('Confirmar mínimos de entradas: '+t.minPending.join(', ')+'.');
- if(state.mode==='carta')msg.push('Precios del resto del menú y extras sujetos a confirmación.');
+ if(state.mode==='armable'){var choiceMissing=[['platos','carne'],['acompanantes','guarnición'],['ensaladas','ensalada'],['salsas','salsa']].filter(function(c){return !allItems().some(function(it){return it.cat===c[0]&&state.picked[it.id];});}).map(function(c){return c[1];});if(choiceMissing.length)msg.push('Quiero ayuda del parrillero para elegir: '+choiceMissing.join(', ')+'.');}
+ if(state.mode==='armable')msg.push('El plato de $20 incluye una carne, una guarnición, una ensalada y una salsa. Las entradas y extras se calculan por separado.');
  if(state.mode==='tiempos')msg.push('Proteínas al barril, al grill o ahumadas. Confirmar cortes, selección de guarniciones y mínimo de invitados para cinco tiempos.');
  msg.push('Quiero confirmar disponibilidad y la cotización final con el chef.');
  var url='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(msg.join('\n'));
