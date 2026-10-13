@@ -515,6 +515,11 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
  .mbar{display:flex;height:104px;padding:16px 352px 16px 24px;justify-content:flex-start;gap:32px;background:#0D0D0D;z-index:78}
  .chef-float{bottom:14px}
 }
+
+.protein-builder{margin:0 0 24px}.protein-builder[hidden]{display:none}.protein-builder>p:first-child{font-size:16px;line-height:1.6;max-width:800px;color:var(--dim);margin:0 0 16px}
+.protein-filters{display:flex;flex-wrap:wrap;gap:12px}.protein-filter{min-height:44px;padding:12px 20px;border:1px solid var(--line-2);background:transparent;color:#fff;font:700 14px/1.4 var(--sans);cursor:pointer;border-radius:4px}
+.protein-filter[aria-pressed="true"]{background:#fff;color:#0D0D0D;border-color:#fff}.protein-filter span{font-weight:400;font-size:12px;margin-left:4px}.protein-filter:focus-visible{outline:2px solid white;outline-offset:3px}
+.protein-builder .hint{font-size:14px;margin-top:16px}
 </style>
 </head>
 <body>
@@ -547,7 +552,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
       <a class="btn btn--ghost" href="#menu">Ver el menú</a>
     </div>
     <div class="hero-stats">
-      <div><strong data-pre="Desde $" data-to="20">Desde $20</strong><span>Por plato</span></div>
+      <div><strong>A tu medida</strong><span>Platos armables</span></div>
       <div><strong data-pre="Hasta " data-to="4000" data-fmt="1">Hasta 4.000</strong><span>Invitados por evento</span></div>
       <div><strong>Ahumadores</strong><span>Barriles Nómadas, en sitio</span></div>
     </div>
@@ -574,7 +579,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
         <h3>Luis Velandia</h3>
         <p>Dueño y chef de EntreCortes. Él está detrás del fuego: selecciona las carnes, define los cortes y cocina en el sitio del evento.</p>
         <ul>
-          <li>Precio base: <b>$20 por plato</b>.</li>
+          <li><b>Platos armables</b>: elige proteínas, guarniciones y ensaladas con el chef.</li>
           <li>Experiencia en eventos de hasta <b>4.000 invitados</b>.</li>
           <li>Cocina con barriles ahumadores de <a href="https://www.instagram.com/ahumadores.nomadas/" target="_blank" rel="noopener">Nómadas Grills</a>, fabricados en Táchira.</li>
           <li>Menú completo: entradas, platos fuertes, guarniciones, ensaladas y salsas.</li>
@@ -647,9 +652,10 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
     </div>
     <div class="tabs" role="tablist" aria-label="Categorías del menú" id="tabs"></div>
     <p class="entry-note" id="entry-note">Entradas opcionales: elige cada una por separado. Los precios son por unidad o por bandeja, no por invitado. Consulta los mínimos de pedido.</p>
+    <div class="protein-builder" id="protein-builder" hidden><p>Arma tu plato: elige las proteínas y completa tu selección con guarniciones, ensaladas y salsas. Preparaciones al barril, al grill y ahumadas, según la selección acordada con el chef.</p><div class="protein-filters" id="protein-filters" role="group" aria-label="Tipos de proteína"></div><p class="hint">Elige una o varias opciones para solicitar una cotización. El chef confirma porciones, combinaciones y precio por persona.</p></div>
     <div class="menu-grid" id="menu-grid"></div>
     <button type="button" class="menu-more" id="menu-more"></button>
-    <p class="hint">Precios en USD. Cada ficha indica su unidad de venta. Los platos fuertes conservan precios de referencia. Guarniciones, ensaladas y salsas: selección, cantidades e inclusión en el servicio a confirmar con el chef.</p>
+    <p class="hint">Precios en USD. Cada ficha indica su unidad de venta. Platos armables, guarniciones, ensaladas y salsas: selección, cantidades, precio e inclusión en el servicio a confirmar con el chef.</p>
   </section>
 
   <section class="section" id="cotizador" style="padding-top:30px">
@@ -833,7 +839,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
       <span class="num">10</span>
       <h2>Preguntas frecuentes de catering</h2>
     </div>
-    <details open><summary>¿Cuánto cuesta por plato?</summary><p>Desde $20 por plato en platos fuertes. El precio final depende del menú elegido, el número de invitados y la ciudad donde se realice el evento.</p></details>
+    <details open><summary>¿Cuánto cuesta por plato?</summary><p>El precio por plato depende de las proteínas, guarniciones y ensaladas elegidas, del número de invitados y de la ciudad. El chef confirma las cantidades y la cotización final.</p></details>
     <details><summary>¿Cuál es el mínimo de invitados?</summary><p>El servicio por plato comienza en 20 personas. Las hamburguesadas requieren al menos 30 unidades y los chili dogs, 50. En asados por tiempos y entradas, consulta el mínimo específico con el chef.</p></details>
     <details><summary>¿Qué incluye el precio por plato?</summary><p>El plato fuerte con sus acompañantes y ensaladas según el menú, el montaje de la estación de fuego, carbón y leña, salsas de la casa y el equipo de cocina. Las entradas son opcionales y tienen precio propio. Guarniciones, ensaladas y salsas se acuerdan según el menú; mesoneros y platería se cotizan aparte. En solo parrillero, el cliente aporta los ingredientes.</p></details>
     <details><summary>¿Hasta dónde se trasladan?</summary><p>La base es San Cristóbal y cubrimos todo Táchira y otras ciudades de Venezuela. El traslado y los viáticos se calculan según distancia.</p></details>
@@ -943,14 +949,183 @@ var MENU = {
   }
 ],
   platos: [
-    {id:"carne", name:"Carne a la parrilla", desc:"Corte seleccionado, punto al gusto.", price:20, per:{g:350}},
-    {id:"pollo", name:"Pollo ahumado", desc:"Ahumado en barril con leña de la zona.", price:16, per:{g:350}},
-    {id:"cochino", name:"Cochino a la vara", desc:"Cuero crocante, cocción lenta.", price:20, per:{g:350}},
-    {id:"costillas", name:"Costillas ahumadas", desc:"Glaseadas y terminadas al carbón.", price:22, per:{g:350}},
-    {id:"mixta", name:"Parrilla mixta", desc:"Res, pollo y chorizo criollo.", price:22, per:{g:350}},
-    {id:"pescado", name:"Pescado a la parrilla", desc:"Filete fresco, con salsa de la casa.", price:20, per:{g:350}},
-    {id:"picana", name:"Picaña premium", desc:"Corte de primera, servicio en tabla.", price:28, per:{g:350}}
-  ],
+  {
+    "id": "solomo",
+    "name": "Solomo",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "res"
+  },
+  {
+    "id": "puntalomito",
+    "name": "Punta de lomito",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "res"
+  },
+  {
+    "id": "polloderes",
+    "name": "Pollo de res",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "res"
+  },
+  {
+    "id": "ganso",
+    "name": "Ganso",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "res"
+  },
+  {
+    "id": "entrana",
+    "name": "Entraña",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "res"
+  },
+  {
+    "id": "asadotira",
+    "name": "Asado de tira",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "res"
+  },
+  {
+    "id": "vacio",
+    "name": "Vacío",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "res"
+  },
+  {
+    "id": "bondiola",
+    "name": "Bondiola",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "cerdo"
+  },
+  {
+    "id": "porkbellyplato",
+    "name": "Pork belly",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "cerdo"
+  },
+  {
+    "id": "costillasahumadas",
+    "name": "Costillas ahumadas",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "cerdo"
+  },
+  {
+    "id": "cerdoentero",
+    "name": "Cerdo entero",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "cerdo"
+  },
+  {
+    "id": "lomocerdo",
+    "name": "Lomo de cerdo",
+    "desc": "Corte y preparación a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "cerdo"
+  },
+  {
+    "id": "cochinillosegoviano",
+    "name": "Cochinillo segoviano",
+    "desc": "Cochinillo pequeño. Consulta la presentación y el servicio con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "cerdo"
+  },
+  {
+    "id": "churrascopollo",
+    "name": "Churrasco de pollo",
+    "desc": "Preparación y porción a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "pollo"
+  },
+  {
+    "id": "pechugaahumada",
+    "name": "Pechuga ahumada",
+    "desc": "Preparación y porción a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "pollo"
+  },
+  {
+    "id": "alitas",
+    "name": "Alitas",
+    "desc": "Preparación y porción a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "pollo"
+  },
+  {
+    "id": "polloenterobrasa",
+    "name": "Pollo entero a la brasa",
+    "desc": "Preparación y porción a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "pollo"
+  },
+  {
+    "id": "polloenterorelleno",
+    "name": "Pollo entero relleno",
+    "desc": "Relleno a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "pollo"
+  },
+  {
+    "id": "supremarellena",
+    "name": "Suprema rellena",
+    "desc": "Relleno a acordar con el chef.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "pollo"
+  },
+  {
+    "id": "chorizoparrillero",
+    "name": "Chorizo parrillero",
+    "desc": "Selección de embutidos para tu asado.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "embutidos"
+  },
+  {
+    "id": "morcillaparrillera",
+    "name": "Morcilla dulce o picante",
+    "desc": "Selección de embutidos para tu asado.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "embutidos"
+  },
+  {
+    "id": "chistorra",
+    "name": "Chistorra",
+    "desc": "Selección de embutidos para tu asado.",
+    "price": null,
+    "per": {},
+    "proteinGroup": "embutidos"
+  }
+],
   acompanantes: [
   {
     "id": "papasbravas",
@@ -1079,6 +1254,13 @@ var MENU = {
     "desc": "Guacamole para acompañar tu selección.",
     "price": null,
     "per": {}
+  },
+  {
+    "id": "isley",
+    "name": "Ensalada Isley",
+    "desc": "Remolacha, pepino y aceite balsámico.",
+    "price": null,
+    "per": {}
   }
 ],
   salsas: [
@@ -1150,7 +1332,7 @@ var EXTRAS = [
   {id:"barra", name:"Barra de bebidas + bartender", desc:"Coctelería y servicio de barra.", price:120, qty:false, adv:true}
 ];
 
-var state = {cat:"entradas", guests:50, picked:{}, extras:{}, mode:"carta", all:false};
+var state = {cat:"entradas", guests:50, picked:{}, extras:{}, mode:"carta", protein:"res", all:false};
 var MODES = {
   carta:{name:"Menú a la carta",min:20,label:"Invitados",hint:"Servicio por plato: mínimo 20 personas. Las entradas se piden por separado."},
   tiempos:{name:"Asado de cinco tiempos",min:1,label:"Invitados",hint:"Mínimo y precio por persona: a confirmar con el chef para cinco tiempos."},
@@ -1166,13 +1348,16 @@ function money0(n){return money(n);}
 function kg(g,n){return (Math.round(g*n/10)/100).toFixed(1).replace('.',',')+' kg';}
 function allItems(){var out=[];Object.keys(MENU).forEach(function(k){MENU[k].forEach(function(it){it.cat=k;out.push(it);});});return out;}
 function itemById(id){return allItems().find(function(it){return it.id===id;});}
-var CATS=[["entradas","Entradas"],["platos","Platos fuertes"],["acompanantes","Guarniciones"],["ensaladas","Ensaladas"],["salsas","Salsas"]];
+var CATS=[["entradas","Entradas"],["platos","Platos armables"],["acompanantes","Guarniciones"],["ensaladas","Ensaladas"],["salsas","Salsas"]];
 document.getElementById('tabs').innerHTML=CATS.map(function(c){return '<button class="tab" role="tab" data-cat="'+c[0]+'" aria-selected="'+(c[0]==='entradas')+'">'+c[1]+'<span class="cnt">'+MENU[c[0]].length+'</span></button>';}).join('');
+document.getElementById('protein-filters').addEventListener('click',function(e){var b=e.target.closest('[data-protein]');if(!b)return;state.protein=b.dataset.protein;state.all=false;renderMenu();});
 document.getElementById('tabs').addEventListener('click',function(e){var b=e.target.closest('.tab');if(!b)return;state.cat=b.dataset.cat;state.all=false;renderMenu();});
 function renderMenu(){
  document.querySelectorAll('.tab').forEach(function(t){t.setAttribute('aria-selected',String(t.dataset.cat===state.cat));});
  document.getElementById('entry-note').hidden=state.cat!=='entradas';
- var list=MENU[state.cat],show=state.all?list.length:Math.min(4,list.length);
+ var isProtein=state.cat==='platos';document.getElementById('protein-builder').hidden=!isProtein;
+ document.getElementById('protein-filters').innerHTML=[['res','Res'],['cerdo','Cerdo'],['pollo','Pollo'],['embutidos','Embutidos']].map(function(g){var count=MENU.platos.filter(function(it){return it.proteinGroup===g[0];}).length;return '<button class="protein-filter" type="button" data-protein="'+g[0]+'" aria-pressed="'+(state.protein===g[0])+'">'+g[1]+' <span>'+count+'</span></button>';}).join('');
+ var list=MENU[state.cat];if(isProtein)list=list.filter(function(it){return it.proteinGroup===state.protein;});var show=state.all?list.length:Math.min(4,list.length);
  document.getElementById('menu-grid').innerHTML=list.slice(0,show).map(function(it){
   var on=!!state.picked[it.id],entry=state.cat==='entradas';
   var unit=entry?(it.unit==='por confirmar'?'unidad de venta por confirmar':'por '+it.unit):(it.per.g?it.per.g+' g / plato':(it.per.u?it.per.u+' piezas / plato':'cantidad a confirmar'));
@@ -1226,7 +1411,7 @@ function total(){
   var val=it.price===null?null:it.price*(entry?q:state.guests);
   if(entry&&it.min===null){sub+=' · mínimo por confirmar';minPending.push(it.name);}
   if(val===null)pending.push(it.name);else food+=val;
-  if(it.cat==='platos')protG+=it.per.g;
+  if(it.cat==='platos'&&it.per.g)protG+=it.per.g;
   lines.push({name:it.name,sub:sub,val:val});
  });
  EXTRAS.forEach(function(x){var q=state.extras[x.id]||0;if(!q)return;var val=x.price===null?null:q*x.price;if(val===null)pending.push(x.name);else extrasTotal+=val;xlines.push({name:x.name+(x.qty?' × '+q:''),sub:'Adicional',val:val});});
@@ -1264,7 +1449,7 @@ function render(){
 }
 
 // marquee
-var strip = ["Entradas","Asados por tiempos","Platos fuertes","Guarniciones","Ensaladas","Salsas de la casa","Al barril · al grill · ahumadas","Coffee breaks","Eventos corporativos","San Cristóbal · Táchira"];
+var strip = ["Entradas","Asados por tiempos","Platos armables","Guarniciones","Ensaladas","Salsas de la casa","Al barril · al grill · ahumadas","Coffee breaks","Eventos corporativos","San Cristóbal · Táchira"];
 var piece = strip.map(function(s){ return "<span>" + s + "<i>◆</i></span>"; }).join("");
 document.getElementById("marquee").innerHTML = piece + piece;
 
