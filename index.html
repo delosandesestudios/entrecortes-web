@@ -449,6 +449,66 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
 .gal figure img{cursor:zoom-in}
 @media(prefers-reduced-motion:reduce){.grain{animation:none}.hero-seal{animation:none;opacity:.12}.reveal{opacity:1;transform:none;transition:none}}
 </style>
+<style id="tiempos-entradas-chef">
+/* The established black-and-white identity stays intact. */
+.section{scroll-margin-top:88px}.legacy-anchor{display:block;scroll-margin-top:88px}
+.modalities{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px}
+.mod-card{border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:16px;background:rgba(255,255,255,.02)}
+.mod-card.is-on{border-color:rgba(255,255,255,.65)}
+.mod-card .kicker{font-size:11px;letter-spacing:.08em}.mod-card h3{font-size:26px;margin:0;line-height:1.2;overflow-wrap:normal}
+.mod-card p{margin:0;font-size:14px;line-height:1.65;color:var(--dim)}.mod-card p:not(.mod-price){flex:1}
+.mod-card .mod-price{font:26px/1.1 var(--display);color:#fff}.mod-price span{display:block;font:14px/1.5 var(--sans);margin-top:8px;color:var(--dim2)}
+.mod-card .item-add{font-size:10px;letter-spacing:.08em;padding:10px;line-height:1.4}
+.time-intro{font-size:18px;line-height:1.65;max-width:730px;margin:0 0 32px;color:var(--dim)}
+.time-feature{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+.time-visual{position:relative;min-height:560px;overflow:hidden}.time-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.10) 35%,rgba(0,0,0,.88) 100%);pointer-events:none}
+.time-visual img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:saturate(.55)}
+.time-badge{position:absolute;top:24px;left:24px;z-index:1;background:#fff;color:#0D0D0D;padding:12px 16px;font:700 12px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.time-caption{position:absolute;bottom:32px;left:32px;right:24px;z-index:1}.time-caption>span{font-size:14px;line-height:1.5}.time-caption h3{font-size:clamp(34px,4vw,50px);line-height:1.05;margin:12px 0 0}
+.time-detail{padding:32px;display:flex;flex-direction:column;justify-content:center}.time-detail .eyebrow{font-size:12px;line-height:1.5;letter-spacing:.14em;margin:0 0 16px}
+.time-lede{margin:0;font-size:17px;line-height:1.6;color:var(--dim)}
+.time-specs{margin:24px 0}.time-specs>div{padding:14px 0;border-bottom:1px solid var(--line)}.time-specs>div:first-child{padding-top:0}
+.time-specs dt{font-size:14px;font-weight:700;margin-bottom:4px}.time-specs dd{margin:0;color:var(--dim2);font-size:14px;line-height:1.55}
+.time-detail .btn{width:100%;font-size:11px;letter-spacing:.06em;line-height:1.5;padding:12px 16px;white-space:normal}
+.time-detail .hint{font-size:14px;line-height:1.6;margin:16px 0 0}
+.entry-note{max-width:800px;margin:0 0 24px;font-size:16px;line-height:1.6;color:var(--dim)}.entry-note[hidden]{display:none}
+.item{padding:24px;gap:12px}.item-name{font-size:16px;line-height:1.35}.item p{font-size:14px;line-height:1.6}
+.item-price small{font-size:12px;line-height:1.4;letter-spacing:.04em;max-width:140px;white-space:normal}.item-price .price-consult{font:600 16px/1.4 var(--sans)}
+.item .entry-min{font-size:14px;color:var(--dim2);flex:0;border-top:1px solid var(--line);padding-top:12px}
+.item-add{font-size:11px;letter-spacing:.07em;line-height:1.4;padding:10px 12px}.entry-quantity{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.entry-quantity label{font-size:14px;line-height:1.5}.entry-quantity input{width:90px;min-height:44px;background:#161616;border:1px solid var(--line-2);color:#fff;font:16px var(--sans);padding:8px 12px;border-radius:0}
+.mode-field{margin-bottom:24px}.pending-price,.pending-min{font-size:14px;line-height:1.6;color:var(--dim);padding:16px 0;border-top:1px solid var(--line);margin:8px 0 0}
+.sum-line>span:last-child{flex:0 0 auto;font-size:14px;max-width:110px;text-align:right}.sum-line em{font-size:13px;line-height:1.6}.summary .note{font-size:13px;line-height:1.6}
+#service-mode{width:100%;font-size:14px}.xprice{font-size:14px}.xdesc{font-size:13px;line-height:1.5}.hint{line-height:1.6}
+.chef-float{z-index:80;right:20px;bottom:20px;max-width:calc(100vw - 32px);width:300px;min-height:76px;gap:12px;padding:12px 18px 12px 12px;text-transform:none;letter-spacing:0;background:#fff;color:#0D0D0D;border:1px solid rgba(255,255,255,.65);box-shadow:0 4px 24px rgba(0,0,0,.28);border-radius:999px}
+.chef-float::after{display:none}.chef-float .wlab{display:block}.chef-float .wlab>span{display:block;font:500 13px/1.5 var(--sans)}.chef-float strong{display:block;font:700 15px/1.5 var(--sans)}
+.chef-avatar{position:relative;flex:0 0 48px;width:48px;height:48px}.chef-avatar img{width:48px;height:48px;object-fit:cover;object-position:50% 38%;border-radius:50%;filter:grayscale(1)}
+.chef-float .chef-avatar svg{position:absolute;right:0;bottom:0;width:21px;height:21px;border:2px solid white;border-radius:50%;background:#fff;color:#0D0D0D}
+.chef-float:focus-visible{outline:2px solid white;outline-offset:5px}.chef-float:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.35)}
+@media(max-width:1050px){.modalities{grid-template-columns:repeat(2,minmax(0,1fr))}.nav-links{gap:16px}.nav-links a{font-size:10px;letter-spacing:.10em}}
+@media(max-width:880px){.time-feature{grid-template-columns:1fr}.time-visual{min-height:360px}.time-detail{padding:24px}.chef-float{width:280px;min-height:72px;height:auto;padding:10px 16px 10px 10px;justify-content:flex-start}.chef-float .wlab{display:block}.chef-float .chef-avatar svg{width:21px;height:21px}}
+@media(max-width:760px){
+ body{padding-bottom:160px}.mbar{height:152px;padding:86px 16px 16px;align-items:center;background:#0D0D0D;z-index:78}
+ .chef-float{bottom:78px;right:16px;width:calc(100% - 32px);max-width:420px;min-height:64px;height:64px;padding:8px 16px;gap:12px;border-radius:32px;z-index:80}
+ .chef-float .wlab>span{font-size:13px}.chef-float strong{font-size:15px}.chef-avatar,.chef-avatar img{width:44px;height:44px;flex-basis:44px}
+ .modalities{gap:12px}.mod-card{padding:20px}.time-intro{font-size:16px}.time-caption{left:24px;bottom:24px}.time-visual{min-height:320px}
+ .tabs{gap:8px}.tab{font-size:11px;letter-spacing:.04em;padding:14px 12px}.item-top{gap:12px}.item{padding:20px}.item-price{font-size:22px}.item-price small{max-width:105px}
+ .entry-note{font-size:15px}.time-badge{top:20px;left:20px}.sum-line>span:last-child{font-size:13px}.summary .big{font-size:42px}
+}
+@media(max-width:480px){.modalities{grid-template-columns:1fr}.mod-card h3{font-size:clamp(19px,6vw,26px)}.mod-card .item-add{font-size:11px}.time-caption h3{font-size:34px}.time-detail .btn{font-size:10px}.item-top{flex-wrap:wrap}.item-price small{text-align:left;max-width:none}.item-price{display:flex;align-items:baseline;gap:8px}.item-price small{margin-top:0}.item-name{flex:0 0 100%}}
+@media(prefers-reduced-motion:reduce){.chef-float{transition:none}.chef-float:hover{transform:none}}
+
+
+/* Legible white summary and roomy logistics controls. */
+.summary .pending-price,.summary .pending-min{color:#444;border-color:#ccc}
+.summary .sum-empty,.summary .per,.summary .sum-line em,.summary .sum-key em{color:#595959}
+.summary .btn{background:#0D0D0D;color:#fff;border-color:#0D0D0D}.summary .btn:hover{background:#333}.summary .btn:focus-visible{outline-color:#0D0D0D}
+.xrow{grid-template-columns:minmax(0,1fr) auto auto}.xrow .xprice{font:700 14px/1.5 var(--sans)}
+.xrow .xmain{min-width:0}.summary .sum-line>span:first-child{min-width:0;overflow-wrap:anywhere}
+@media(max-width:680px){.modalities{grid-template-columns:1fr}.xrow{grid-template-columns:1fr auto;gap:12px}.xrow .xmain{grid-column:1/-1}.xrow .xprice{justify-self:start}.xrow .xqty{grid-column:2}.xrow .xqty button{width:44px}}
+
+.item-top{flex-wrap:wrap}.item-name{flex:0 0 100%}.item-price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.item-price small{text-align:left;margin-top:0;max-width:none}
+</style>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
@@ -460,7 +520,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
     <a class="brand" href="#top"><img loading="lazy" decoding="async" src="img/logo.webp" width="300" height="300" alt="Logo de EntreCortes"><span>EntreCortes<small>Catering · Táchira</small></span></a>
     <div class="nav-links">
       <a href="#menu">Menú</a>
-      <a href="#paquetes">Paquetes</a>
+      <a href="#tiempos">Asados por tiempos</a>
       <a href="#eventos">Eventos</a>
       <a href="#faq">Preguntas</a>
     </div>
@@ -496,7 +556,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
     <div class="sec-head">
       <span class="num">01</span>
       <h2>El maestro de las carnes</h2>
-      <span class="note">Show de carnes<br>en vivo</span>
+      <span class="note">Cocina al fuego<br>en tu evento</span>
     </div>
     <div class="chef">
       <figure>
@@ -510,7 +570,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
           <li>Precio base: <b>$20 por plato</b>.</li>
           <li>Experiencia en eventos de hasta <b>4.000 invitados</b>.</li>
           <li>Cocina con barriles ahumadores de <a href="https://www.instagram.com/ahumadores.nomadas/" target="_blank" rel="noopener">Nómadas Grills</a>, fabricados en Táchira.</li>
-          <li>Menú completo: aperitivos, platos fuertes, acompañantes y ensaladas.</li>
+          <li>Menú completo: entradas, platos fuertes, acompañantes y ensaladas.</li>
         </ul>
       </div>
     </div>
@@ -549,28 +609,40 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
         </div>
       </article>
     </div>
+
+    <div class="modalities" aria-label="Modalidades de servicio">
+      <article class="mod-card"><span class="kicker">01 · Por unidad</span><h3>Hamburguesadas</h3><p class="mod-price">$9 <span>por hamburguesa</span></p><p>Mínimo 30 unidades. Una opción para reunir a todos alrededor del fuego.</p><button class="item-add" data-mode="hamburguesas">Cotizar hamburguesada</button></article>
+      <article class="mod-card"><span class="kicker">02 · Por unidad</span><h3>Chili dogs</h3><p class="mod-price">$5 <span>por unidad</span></p><p>Mínimo 50 unidades. Consulta al chef por la opción libanesa.</p><button class="item-add" data-mode="chili">Cotizar chili dogs</button></article>
+      <article class="mod-card"><span class="kicker">03 · Por persona</span><h3>Servicio por plato</h3><p class="mod-price">A tu medida</p><p>Desde 20 personas. El precio depende del menú y del número de invitados.</p><button class="item-add" data-mode="carta">Armar mi menú</button></article>
+      <article class="mod-card"><span class="kicker">04 · Tarifa de servicio</span><h3>Solo parrillero</h3><p class="mod-price">$200 <span>en San Cristóbal</span></p><p>El chef lleva parrilla, mesas y equipo. Tú suministras los ingredientes. Traslado fuera de la ciudad, aparte.</p><button class="item-add" data-mode="parrillero">Cotizar al parrillero</button></article>
+    </div>
     <p class="zones">Atendemos San Cristóbal, Táriba, La Fría, San Antonio del Táchira, Rubio, Mérida y Cúcuta, y nos trasladamos al resto de Venezuela con viáticos. Parrillero a domicilio, barriles ahumadores y montaje completo para eventos sociales y empresas.</p>
   </section>
 
-  <section class="section" id="paquetes" style="padding-top:30px">
-    <div class="sec-head">
-      <span class="num">03</span>
-      <h2>Paquetes</h2>
-      <span class="note">Elige un paquete<br>o arma tu menú a la carta</span>
-    </div>
-    <div class="pkgs" id="pkgs"></div>
+  <section class="section" id="tiempos" style="padding-top:30px">
+    <span id="paquetes" class="legacy-anchor" aria-hidden="true"></span>
+    <div class="sec-head"><span class="num">03</span><h2>Asados por tiempos</h2><span class="note">El fuego marca<br>el ritmo de tu evento</span></div>
+    <p class="time-intro">No es todo en un solo plato. Las preparaciones llegan en una secuencia de tiempos, para disfrutar cada parte del asado.</p>
+    <article class="time-feature">
+      <div class="time-visual"><img src="img/svc3.webp" srcset="img/svc3-480.webp 480w, img/svc3.webp 900w" sizes="(max-width:880px) 100vw, 560px" width="900" height="675" alt="Carnes de EntreCortes preparadas al fuego" loading="lazy"><span class="time-badge">La más solicitada</span><div class="time-caption"><span>Una experiencia en secuencia</span><h3>Cinco tiempos</h3></div></div>
+      <div class="time-detail"><p class="eyebrow">Del fuego a tu mesa</p><p class="time-lede">Cinco momentos para compartir el asado. El chef te ayuda a definir la selección para tu evento.</p>
+        <dl class="time-specs"><div><dt>Proteínas y cortes</dt><dd>Selección a confirmar con el chef.</dd></div><div><dt>Guarniciones</dt><dd>Opciones y cantidades a confirmar según el menú.</dd></div><div><dt>Precio por persona</dt><dd>Consultar según la selección.</dd></div><div><dt>Mínimo de invitados</dt><dd>Consultar para esta modalidad.</dd></div></dl>
+        <button class="btn" id="choose-tiempos" type="button" data-mode="tiempos">Elegir cinco tiempos y cotizar</button><p class="hint">El chef confirma los cortes, las guarniciones, el mínimo y el precio antes de reservar.</p>
+      </div>
+    </article>
   </section>
 
   <section class="section" id="menu" style="padding-top:30px">
     <div class="sec-head">
       <span class="num">04</span>
       <h2>Menú a la carta para tu evento</h2>
-      <span class="note">Toca un plato<br>para añadirlo a tu cotización</span>
+      <span class="note">Entradas opcionales<br>con precio propio</span>
     </div>
     <div class="tabs" role="tablist" aria-label="Categorías del menú" id="tabs"></div>
+    <p class="entry-note" id="entry-note">Entradas opcionales: elige cada una por separado. Los precios son por unidad o por bandeja, no por invitado. Consulta los mínimos de pedido.</p>
     <div class="menu-grid" id="menu-grid"></div>
     <button type="button" class="menu-more" id="menu-more"></button>
-    <p class="hint">Precios en USD por plato (una porción por invitado). Se ajustan según número de invitados, ciudad y temporada.</p>
+    <p class="hint">Precios en USD. Cada ficha indica su unidad de venta. Platos fuertes, acompañantes y ensaladas conservan precios de referencia, sujetos a confirmación del chef.</p>
   </section>
 
   <section class="section" id="cotizador" style="padding-top:30px">
@@ -583,15 +655,16 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
       <div>
         <div class="panel">
           <h3>Tu evento</h3>
+          <div class="field mode-field"><label for="service-mode">¿Qué servicio quieres?</label><select id="service-mode"><option value="carta">Menú a la carta</option><option value="tiempos">Asado de cinco tiempos</option><option value="hamburguesas">Hamburguesada · mínimo 30 unidades</option><option value="chili">Chili dogs · mínimo 50 unidades</option><option value="parrillero">Solo parrillero · $200 en San Cristóbal</option></select></div>
           <div class="row2">
             <div class="field">
-              <span class="lab" id="lab-guests">Invitados (platos)</span>
+              <span class="lab" id="lab-guests">Invitados</span>
               <div class="stepper">
                 <button type="button" id="g-minus" aria-label="Quitar invitados">–</button>
-                <input id="guests" type="number" inputmode="numeric" value="50" min="15" max="4000" aria-labelledby="lab-guests">
+                <input id="guests" type="number" inputmode="numeric" value="50" min="20" max="4000" aria-labelledby="lab-guests">
                 <button type="button" id="g-plus" aria-label="Añadir invitados">+</button>
               </div>
-              <p class="hint">Mínimo 15 invitados. Hemos atendido hasta 4.000.</p>
+              <p class="hint" id="guest-hint">Servicio por plato: mínimo 20 personas. Las entradas se piden por separado.</p>
             </div>
             <div class="field">
               <label for="city">Ciudad del evento</label>
@@ -638,7 +711,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
           <span class="big" id="sum-total">$0</span>
           <span class="per" id="sum-per">Elige tu menú<br>para ver el estimado</span>
         </div>
-        <p class="note">Estimado con el precio base de $20 por plato. La cotización final la confirma EntreCortes según menú, invitados y ciudad. Dos líneas de WhatsApp: 0424-781.7241 y 0414-720.1370.</p>
+        <p class="note">Cada concepto se calcula según su unidad de venta. Los importes pendientes no se suman como si fueran cero: el chef confirma el total, los mínimos y la logística. WhatsApp: 0424-781.7241 y 0414-720.1370.</p>
         <a class="btn btn--ink" id="wa" href="#">Enviar por WhatsApp</a>
       </aside>
     </div>
@@ -720,12 +793,13 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
       <span class="num">09</span>
       <h2>Qué incluye el servicio</h2>
     </div>
+    <p class="hint">En la modalidad solo parrillero, el cliente suministra los ingredientes; la tarifa cubre el servicio del chef, parrilla, mesas y equipo.</p>
     <div class="two">
       <div class="panel">
-        <h3>Incluido en el servicio</h3>
+        <h3>Según el menú contratado</h3>
         <ul class="list list--yes">
           <li>Carnes seleccionadas y marinadas</li>
-          <li>Aperitivos, acompañantes y ensaladas elegidos</li>
+          <li>Acompañantes y ensaladas acordados en la cotización</li>
           <li>Estación de fuego montada en tu evento</li>
           <li>Carbón, leña y gas</li>
           <li>Salsas de la casa</li>
@@ -733,8 +807,9 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
         </ul>
       </div>
       <div class="panel">
-        <h3>Se cotiza aparte</h3>
+        <h3>Adicionales opcionales</h3>
         <ul class="list list--no">
+          <li>Entradas, salvo que se acuerden dentro del menú</li>
           <li>Mesoneros y personal de servicio</li>
           <li>Platería, loza y mantelería</li>
           <li>Barra de bebidas y bartender</li>
@@ -752,8 +827,8 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
       <h2>Preguntas frecuentes de catering</h2>
     </div>
     <details open><summary>¿Cuánto cuesta por plato?</summary><p>Desde $20 por plato en platos fuertes. El precio final depende del menú elegido, el número de invitados y la ciudad donde se realice el evento.</p></details>
-    <details><summary>¿Cuál es el mínimo de invitados?</summary><p>Trabajamos desde 15 invitados y hemos atendido eventos de hasta 4.000. Para grupos más pequeños evaluamos caso por caso, porque el montaje del fuego y el traslado pesan igual.</p></details>
-    <details><summary>¿Qué incluye el precio por plato?</summary><p>El plato fuerte con sus acompañantes y ensaladas según el menú, el montaje de la estación de fuego, carbón y leña, salsas de la casa y el equipo de cocina. Los aperitivos, mesoneros y la platería se cotizan aparte.</p></details>
+    <details><summary>¿Cuál es el mínimo de invitados?</summary><p>El servicio por plato comienza en 20 personas. Las hamburguesadas requieren al menos 30 unidades y los chili dogs, 50. En asados por tiempos y entradas, consulta el mínimo específico con el chef.</p></details>
+    <details><summary>¿Qué incluye el precio por plato?</summary><p>El plato fuerte con sus acompañantes y ensaladas según el menú, el montaje de la estación de fuego, carbón y leña, salsas de la casa y el equipo de cocina. Las entradas son opcionales y tienen precio propio; mesoneros y platería se cotizan aparte. En solo parrillero, el cliente aporta los ingredientes.</p></details>
     <details><summary>¿Hasta dónde se trasladan?</summary><p>La base es San Cristóbal y cubrimos todo Táchira y otras ciudades de Venezuela. El traslado y los viáticos se calculan según distancia.</p></details>
     <details><summary>¿Con cuánta anticipación reservo?</summary><p>Idealmente 15 días antes. En temporada de graduaciones, Navidad y fin de año, 30 días o más, porque las fechas se llenan.</p></details>
     <details><summary>¿Atienden eventos de empresa?</summary><p>Sí. Hacemos desayunos, brunchs, picoteos, coffee breaks y celebraciones corporativas, con entrega puntual y montaje eficiente.</p></details>
@@ -775,7 +850,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--lin
 
 <footer>
   <p><strong style="color:#fff">ENTRECORTES</strong> · Catering de carnes, carne en vara y ahumados para eventos. San Cristóbal, Táchira, Venezuela.<br>
-  Prototipo web · versión 10 · diseño en blanco y negro · precios de referencia (desde $20 por plato), pendientes de confirmar · WhatsApp <a href="https://wa.me/584247817241" target="_blank" rel="noopener">0424-781.7241</a> · <a href="https://wa.me/584147201370" target="_blank" rel="noopener">0414-720.1370</a>.</p>
+  Precios en USD · La selección, los mínimos y la cotización final se confirman con el chef · WhatsApp <a href="https://wa.me/584247817241" target="_blank" rel="noopener">0424-781.7241</a> · <a href="https://wa.me/584147201370" target="_blank" rel="noopener">0414-720.1370</a>.</p>
   <p><a href="https://www.instagram.com/entrecortes.ve/" target="_blank" rel="noopener">@entrecortes.ve</a></p>
 </footer>
 
@@ -792,18 +867,74 @@ var WHATSAPP = "584247817241";   // 0424-781.7241 (línea principal)
   var WHATSAPP_2 = "584147201370"; // 0414-720.1370 (línea alterna)
 
 var MENU = {
-  aperitivos: [
-    {id:"tequenos", name:"Tequeños", desc:"Fritos al momento, con salsa de la casa.", price:5, per:{u:3}},
-    {id:"empanadas", name:"Mini empanadas", desc:"Relleno a elección, recién hechas.", price:5, per:{u:2}},
-    {id:"brochetas", name:"Brochetas mixtas", desc:"Res, pollo y vegetales.", price:6, per:{u:1}},
-    {id:"canapes", name:"Canapés variados", desc:"Selección de bocados fríos y calientes.", price:6, per:{u:2}},
-    {id:"chicharron", name:"Chicharrón", desc:"Crocante, recién hecho.", price:6, per:{u:1}},
-    {id:"queso", name:"Queso a la plancha", desc:"Con arepitas o pan.", price:5, per:{u:1}},
-    {id:"arepitas", name:"Arepitas con queso", desc:"Asadas a la parrilla.", price:4, per:{u:3}},
-    {id:"tostones", name:"Tostones con queso", desc:"Con pico de gallo.", price:4.5, per:{u:2}},
-    {id:"croquetas", name:"Croquetas", desc:"De pollo o de queso.", price:5, per:{u:3}},
-    {id:"tabla", name:"Tabla de embutidos", desc:"Chorizo, morcilla y jamón.", price:7, per:{u:1}}
-  ],
+  entradas: [
+  {
+    "id": "frangominhon",
+    "name": "Frangominhon",
+    "desc": "Pollo envuelto en tocineta.",
+    "price": 1.8,
+    "unit": "unidad",
+    "min": null
+  },
+  {
+    "id": "filetmignon",
+    "name": "Filetmignon",
+    "desc": "Lomito envuelto en tocineta.",
+    "price": null,
+    "unit": "unidad",
+    "min": null
+  },
+  {
+    "id": "queso",
+    "name": "Queso asado",
+    "desc": "Queso preparado a la parrilla.",
+    "price": 1,
+    "unit": "unidad",
+    "min": null
+  },
+  {
+    "id": "brochetas",
+    "name": "Mini brochetas",
+    "desc": "Carne, pimientos rojos y verdes, y cebolla.",
+    "price": 1.8,
+    "unit": "unidad",
+    "min": null
+  },
+  {
+    "id": "porkbelly",
+    "name": "Pork belly",
+    "desc": "Bocado de panceta. Consulta el acompañamiento con el chef.",
+    "price": 1.5,
+    "unit": "unidad",
+    "min": null
+  },
+  {
+    "id": "hojaldrados",
+    "name": "Pequeños hojaldrados",
+    "desc": "Pedido por bandeja de 50 unidades.",
+    "price": 28,
+    "unit": "bandeja de 50",
+    "batch": 50,
+    "min": 1
+  },
+  {
+    "id": "morcilla",
+    "name": "Morcilla",
+    "desc": "Presentación de 50 unidades. Preparación y precio a confirmar.",
+    "price": null,
+    "unit": "bandeja de 50",
+    "batch": 50,
+    "min": 1
+  },
+  {
+    "id": "toston",
+    "name": "Tostón",
+    "desc": "Entrada de plátano verde. Presentación a confirmar con el chef.",
+    "price": null,
+    "unit": "por confirmar",
+    "min": null
+  }
+],
   platos: [
     {id:"carne", name:"Carne a la parrilla", desc:"Corte seleccionado, punto al gusto.", price:20, per:{g:350}},
     {id:"pollo", name:"Pollo ahumado", desc:"Ahumado en barril con leña de la zona.", price:16, per:{g:350}},
@@ -833,267 +964,134 @@ var MENU = {
   ]
 };
 
-var PACKAGES = [
-  {id:"esencial", name:"Esencial", price:22, g:350, inc:["1 plato fuerte a elección","1 acompañante","1 ensalada","Salsas de la casa","Cocina y montaje en sitio"]},
-  {id:"completo", name:"Completo", price:26, g:400, best:true, inc:["1 aperitivo a elección","1 plato fuerte","2 acompañantes","1 ensalada","Salsas de la casa","Cocina y montaje en sitio"]},
-  {id:"premium", name:"Premium", price:34, g:450, inc:["2 aperitivos","Plato fuerte premium (picaña o costillas ahumadas)","2 acompañantes","1 ensalada","Ahumador y parrillero en sitio","Platería y mantelería"]}
-];
-
 var EXTRAS = [
-  {id:"parrillero", name:"Parrillero y ahumador en sitio", desc:"Estación de fuego y barril ahumador atendidos durante el evento.", price:90, qty:false},
   {id:"mesonero", name:"Mesonero / personal de servicio", desc:"Por persona de staff. Sugerido: 1 por cada 20 invitados.", price:35, qty:true},
-  {id:"traslado", name:"Logística y traslado", desc:"Fuera de San Cristóbal: se ajusta por distancia y viáticos.", price:50, qty:false},
+  {id:"traslado", name:"Logística y traslado", desc:"Fuera de San Cristóbal: se ajusta por distancia y viáticos.", price:null, qty:false},
   {id:"plateria", name:"Platería, loza y mantelería", desc:"Montaje completo de mesa.", price:60, qty:false, adv:true},
   {id:"insumos", name:"Carbón, leña y gas", desc:"Insumos de cocción del evento.", price:30, qty:false, adv:true},
   {id:"animacion", name:"Animación / DJ", desc:"Sonido y música para la celebración.", price:150, qty:false, adv:true},
   {id:"barra", name:"Barra de bebidas + bartender", desc:"Coctelería y servicio de barra.", price:120, qty:false, adv:true}
 ];
 
-var state = {cat:"aperitivos", guests:50, picked:{}, extras:{}, pkg:null, all:false};
-
+var state = {cat:"entradas", guests:50, picked:{}, extras:{}, mode:"carta", all:false};
+var MODES = {
+  carta:{name:"Menú a la carta",min:20,label:"Invitados",hint:"Servicio por plato: mínimo 20 personas. Las entradas se piden por separado."},
+  tiempos:{name:"Asado de cinco tiempos",min:1,label:"Invitados",hint:"Mínimo y precio por persona: a confirmar con el chef para cinco tiempos."},
+  hamburguesas:{name:"Hamburguesada",min:30,label:"Hamburguesas (unidades)",price:9,hint:"Mínimo 30 hamburguesas · $9 por unidad. Las entradas se piden por separado."},
+  chili:{name:"Chili dogs",min:50,label:"Chili dogs (unidades)",price:5,hint:"Mínimo 50 unidades · $5 por unidad. Las entradas se piden por separado."},
+  parrillero:{name:"Solo parrillero",min:1,label:"Invitados",price:200,hint:"$200 por servicio en San Cristóbal. Tú aportas los ingredientes; traslado fuera de la ciudad, aparte."}
+};
 var MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
-function fechaLarga(v){
-  if(!v) return "por definir";
-  var p = String(v).split("-"); if(p.length !== 3) return v;
-  var mes = MESES[parseInt(p[1],10) - 1];
-  return parseInt(p[2],10) + " de " + mes + " de " + p[0];
-}
-function fmt(n, dec){
-  var p = Math.abs(n).toFixed(dec).split(".");
-  p[0] = p[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  var dec = p[1] ? p[1].replace(/0+$/, "") : ""; var out = dec ? p[0] + "," + dec : p[0];
-  return (n < 0 ? "-" : "") + out;
-}
-function money(n){ return "$" + fmt(n, 2); }
-function money0(n){ return "$" + fmt(Math.round(n), 0); }
-function kg(g, n){ var v = Math.round(g*n/10)/100; return v.toFixed(1).replace(".",",") + " kg"; }
-function allItems(){
-  var out = [];
-  Object.keys(MENU).forEach(function(k){ MENU[k].forEach(function(it){ it.cat = k; out.push(it); }); });
-  return out;
-}
-function pkg(){ return state.pkg ? PACKAGES.filter(function(p){ return p.id === state.pkg; })[0] : null; }
-
-var CATS = [["aperitivos","Aperitivos"],["platos","Platos fuertes"],["acompanantes","Acompañantes"],["ensaladas","Ensaladas"]];
-
-document.getElementById("tabs").innerHTML = CATS.map(function(c){
-  return '<button class="tab" role="tab" data-cat="' + c[0] + '" aria-selected="' + (c[0]==="aperitivos") + '">' + c[1] + '<span class="cnt">' + MENU[c[0]].length + '</span></button>';
-}).join("");
-
-document.getElementById("tabs").addEventListener("click", function(e){
-  var b = e.target.closest(".tab"); if(!b) return;
-  state.cat = b.dataset.cat; state.all = false; renderMenu();
-});
-
-function renderPkgs(){
-  document.getElementById("pkgs").innerHTML = PACKAGES.map(function(p){
-    var on = state.pkg === p.id;
-    return '<div class="pkg' + (on ? ' is-on' : '') + '" data-id="' + p.id + '">' +
-      (p.best ? '<span class="flag">Más pedido</span>' : '') +
-      '<h3>' + p.name + '</h3>' +
-      '<div class="pk-price">' + money0(p.price) + '<small>por plato · desde</small></div>' +
-      '<ul>' + p.inc.map(function(i){ return '<li>' + i + '</li>'; }).join('') + '</ul>' +
-      '<button type="button" class="item-add">' + (on ? 'Paquete elegido ✓' : 'Elegir ' + p.name) + '</button>' +
-    '</div>';
-  }).join("");
-}
-document.getElementById("pkgs").addEventListener("click", function(e){
-  var card = e.target.closest(".pkg"); if(!card) return;
-  state.pkg = state.pkg === card.dataset.id ? null : card.dataset.id;
-  if(state.pkg) state.picked = {};
-  renderPkgs(); renderMenu(); render();
-});
-
-function xrowHTML(x){
-  return '<div class="xrow" data-id="' + x.id + '">' +
-    '<button type="button" class="xmain xact">' +
-      '<span class="tick"><i>✓</i></span>' +
-      '<span><span class="xname">' + x.name + '</span><span class="xdesc" style="display:block">' + x.desc + '</span></span>' +
-    '</button>' +
-    '<span class="xprice">' + money0(x.price) + '</span>' +
-    (x.qty
-      ? '<span class="xqty"><button type="button" data-act="dec" aria-label="Menos">–</button><span data-qty>0</span><button type="button" data-act="inc" aria-label="Más">+</button></span>'
-      : '<span></span>') +
-  '</div>';
-}
-document.getElementById("extras").innerHTML = EXTRAS.filter(function(x){ return !x.adv; }).map(xrowHTML).join("");
-document.getElementById("xadv-body").innerHTML = EXTRAS.filter(function(x){ return x.adv; }).map(xrowHTML).join("");
-
+function fechaLarga(v){if(!v)return "por definir";var p=v.split("-");return parseInt(p[2],10)+" de "+MESES[parseInt(p[1],10)-1]+" de "+p[0];}
+function fmt(n,dec){var a=Math.abs(n).toFixed(dec).split('.');a[0]=a[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.');var d=a[1]?a[1].replace(/0+$/,''):'';return(n<0?'-':'')+a[0]+(d?','+d:'');}
+function money(n){return '$'+fmt(n,2);}
+function money0(n){return money(n);}
+function kg(g,n){return (Math.round(g*n/10)/100).toFixed(1).replace('.',',')+' kg';}
+function allItems(){var out=[];Object.keys(MENU).forEach(function(k){MENU[k].forEach(function(it){it.cat=k;out.push(it);});});return out;}
+function itemById(id){return allItems().find(function(it){return it.id===id;});}
+var CATS=[["entradas","Entradas"],["platos","Platos fuertes"],["acompanantes","Acompañantes"],["ensaladas","Ensaladas"]];
+document.getElementById('tabs').innerHTML=CATS.map(function(c){return '<button class="tab" role="tab" data-cat="'+c[0]+'" aria-selected="'+(c[0]==='entradas')+'">'+c[1]+'<span class="cnt">'+MENU[c[0]].length+'</span></button>';}).join('');
+document.getElementById('tabs').addEventListener('click',function(e){var b=e.target.closest('.tab');if(!b)return;state.cat=b.dataset.cat;state.all=false;renderMenu();});
 function renderMenu(){
-  Array.prototype.forEach.call(document.querySelectorAll(".tab"), function(t){
-    t.setAttribute("aria-selected", String(t.dataset.cat === state.cat));
-  });
-  var list = MENU[state.cat];
-  var show = state.all ? list.length : Math.min(4, list.length);
-  document.getElementById("menu-grid").innerHTML = list.slice(0, show).map(function(it){
-    var on = !!state.picked[it.id];
-    var por = it.per.g ? it.per.g + " g / plato" : it.per.u + (it.per.u === 1 ? " pieza" : " piezas") + " / plato";
-    return '<div class="item' + (on ? ' is-on' : '') + '" data-id="' + it.id + '">' +
-      '<div class="item-top"><span class="item-name">' + it.name + '</span>' +
-      '<span class="item-price">' + money(it.price) + '<small>' + por + '</small></span></div>' +
-      '<p>' + it.desc + '</p>' +
-      '<button type="button" class="item-add">' + (on ? 'Añadido ✓' : 'Añadir') + '</button>' +
-    '</div>';
-  }).join("");
-  var btn = document.getElementById("menu-more");
-  if (list.length <= 4) { btn.style.display = "none"; }
-  else {
-    btn.style.display = "block";
-    btn.textContent = state.all ? "Ver menos" : "Ver los " + list.length + " platos";
-    btn.setAttribute("aria-expanded", String(state.all));
-  }
+ document.querySelectorAll('.tab').forEach(function(t){t.setAttribute('aria-selected',String(t.dataset.cat===state.cat));});
+ document.getElementById('entry-note').hidden=state.cat!=='entradas';
+ var list=MENU[state.cat],show=state.all?list.length:Math.min(4,list.length);
+ document.getElementById('menu-grid').innerHTML=list.slice(0,show).map(function(it){
+  var on=!!state.picked[it.id],entry=state.cat==='entradas';
+  var unit=entry?(it.unit==='por confirmar'?'unidad de venta por confirmar':'por '+it.unit):(it.per.g?it.per.g+' g / plato':it.per.u+' piezas / plato');
+  var price=it.price===null?'<span class="price-consult">Consultar</span>':money(it.price);
+  var meta=entry?'<p class="entry-min">'+(it.batch?'Pedido mínimo: 50 unidades (1 bandeja)':'Pedido mínimo: consultar con el chef')+'</p>':'';
+  var qty=entry&&on?'<div class="entry-quantity"><label for="qty-'+it.id+'">'+(it.batch?'Bandejas de 50':(it.unit==='por confirmar'?'Cantidad a definir':'Unidades'))+'</label><input type="number" id="qty-'+it.id+'" data-entry-qty="'+it.id+'" inputmode="numeric" min="1" max="4000" value="'+state.picked[it.id]+'"></div>':'';
+  return '<article class="item'+(on?' is-on':'')+'" data-id="'+it.id+'"><div class="item-top"><span class="item-name">'+it.name+'</span><span class="item-price">'+price+'<small>'+unit+'</small></span></div><p>'+it.desc+'</p>'+meta+qty+'<button type="button" class="item-add" data-item-toggle="'+it.id+'">'+(on?'Quitar de mi cotización':'Añadir a mi cotización')+'</button></article>';
+ }).join('');
+ var btn=document.getElementById('menu-more');btn.style.display=list.length<=4?'none':'block';btn.textContent=state.all?'Ver menos':'Ver las '+list.length+' opciones';btn.setAttribute('aria-expanded',String(state.all));
 }
-
-window.__v10toggleAll = function(){ state.all = !state.all; renderMenu(); };
-function flashSummary(){
-  var s = document.querySelector(".summary");
-  if(s){ s.classList.remove("flash"); void s.offsetWidth; s.classList.add("flash"); }
-  var m = document.querySelector(".mbar .m-tot");
-  if(m){ m.classList.remove("flash"); void m.offsetWidth; m.classList.add("flash"); }
-}
-function popCard(card, label){
-  if(!card) return;
-  card.classList.add("pop");
-  var fly = document.createElement("span");
-  fly.className = "add-fly"; fly.textContent = label;
-  card.appendChild(fly);
-  requestAnimationFrame(function(){ fly.classList.add("go"); });
-  var btn = card.querySelector(".item-add") || card.querySelector(".xmain");
-  if(btn) btn.classList.add("done");
-  setTimeout(function(){
-    card.classList.remove("pop");
-    if(fly.parentNode) fly.parentNode.removeChild(fly);
-    if(btn) btn.classList.remove("done");
-  }, 1150);
-}
-document.getElementById("menu-grid").addEventListener("click", function(e){
-  var card = e.target.closest(".item"); if(!card) return;
-  var id = card.dataset.id;
-  var adding = !state.picked[id];
-  if(adding){ state.picked[id] = true; if(state.pkg){ state.pkg = null; renderPkgs(); } }
-  else { delete state.picked[id]; }
-  renderMenu(); render();
-  if(adding){
-    popCard(document.querySelector('#menu-grid .item[data-id="' + id + '"]'), "Anadido +");
-    flashSummary();
-  }
+window.__v10toggleAll=function(){state.all=!state.all;renderMenu();};
+function flashSummary(){var el=document.querySelector('.summary');el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');}
+document.getElementById('menu-grid').addEventListener('click',function(e){
+ var button=e.target.closest('[data-item-toggle]');if(!button)return;
+ var it=itemById(button.dataset.itemToggle),on=!!state.picked[it.id];
+ if(on)delete state.picked[it.id];else {state.picked[it.id]=it.cat==='entradas'?(it.batch||it.unit==='por confirmar'?1:state.guests):1;if(it.cat!=='entradas')setMode('carta',false);}
+ renderMenu();render();if(!on)flashSummary();
 });
-
-function onXrowClick(e){
-  var row = e.target.closest(".xrow"); if(!row) return;
-  var x = EXTRAS.filter(function(v){ return v.id === row.dataset.id; })[0];
-  var was = state.extras[x.id] || 0;
-  if(e.target.dataset.act === "inc"){ state.extras[x.id] = Math.min(20, was + 1); }
-  else if(e.target.dataset.act === "dec"){ state.extras[x.id] = Math.max(0, was - 1); }
-  else { state.extras[x.id] = was ? 0 : (x.qty ? Math.max(1, Math.ceil(state.guests/20)) : 1); }
-  render();
-  var now = state.extras[x.id] || 0;
-  if(now > was){ popCard(row, "+" + (now - was)); flashSummary(); }
+document.getElementById('menu-grid').addEventListener('input',function(e){
+ var id=e.target.dataset.entryQty;if(!id)return;var v=parseInt(e.target.value,10);if(!Number.isFinite(v)||v<1)return;
+ state.picked[id]=Math.min(4000,v);if(v>4000)e.target.value=4000;render();
+});
+document.getElementById('menu-grid').addEventListener('change',function(e){var id=e.target.dataset.entryQty;if(!id)return;var v=parseInt(e.target.value,10);state.picked[id]=Math.max(1,Math.min(4000,Number.isFinite(v)?v:1));e.target.value=state.picked[id];render();});
+function setMode(mode,scroll){
+ if(!MODES[mode])return;state.mode=mode;document.getElementById('service-mode').value=mode;
+ if(mode!=='carta')allItems().forEach(function(it){if(it.cat!=='entradas')delete state.picked[it.id];});
+ setGuests(state.guests);renderMenu();render();
+ if(scroll){var target=document.getElementById(mode==='carta'?'menu':'cotizador');target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
 }
-document.getElementById("extras").addEventListener("click", onXrowClick);
-document.getElementById("xadv-body").addEventListener("click", onXrowClick);
-
-function setGuests(v){
-  var n = parseInt(v, 10); if(isNaN(n)) n = 15;
-  state.guests = Math.max(15, Math.min(4000, n));
-  document.getElementById("guests").value = state.guests;
-}
-document.getElementById("g-minus").addEventListener("click", function(){ setGuests(state.guests - 5); render(); });
-document.getElementById("g-plus").addEventListener("click", function(){ setGuests(state.guests + 5); render(); });
-document.getElementById("guests").addEventListener("input", function(e){ setGuests(e.target.value); render(); });
-document.getElementById("city").addEventListener("change", render);
-document.getElementById("date").addEventListener("change", render);
-
+document.querySelectorAll('[data-mode]').forEach(function(b){b.addEventListener('click',function(){setMode(b.dataset.mode,true);});});
+document.getElementById('service-mode').addEventListener('change',function(e){setMode(e.target.value,false);});
+function xrowHTML(x){return '<div class="xrow" data-id="'+x.id+'"><button type="button" class="xmain xact"><span class="tick"><i>✓</i></span><span><span class="xname">'+x.name+'</span><span class="xdesc" style="display:block">'+x.desc+'</span></span></button><span class="xprice">'+(x.price===null?'Consultar':money(x.price))+'</span>'+(x.qty?'<span class="xqty"><button type="button" data-act="dec" aria-label="Menos">–</button><span data-qty>0</span><button type="button" data-act="inc" aria-label="Más">+</button></span>':'<span></span>')+'</div>';}
+document.getElementById('extras').innerHTML=EXTRAS.filter(function(x){return !x.adv;}).map(xrowHTML).join('');
+document.getElementById('xadv-body').innerHTML=EXTRAS.filter(function(x){return x.adv;}).map(xrowHTML).join('');
+function onXrowClick(e){var row=e.target.closest('.xrow');if(!row)return;var x=EXTRAS.find(function(v){return v.id===row.dataset.id;}),was=state.extras[x.id]||0;
+ if(e.target.dataset.act==='inc')state.extras[x.id]=Math.min(20,was+1);else if(e.target.dataset.act==='dec')state.extras[x.id]=Math.max(0,was-1);else if(e.target.closest('.xmain'))state.extras[x.id]=was?0:(x.qty?Math.max(1,Math.ceil(state.guests/20)):1);else return;render();}
+document.getElementById('extras').addEventListener('click',onXrowClick);document.getElementById('xadv-body').addEventListener('click',onXrowClick);
+function setGuests(v){var n=parseInt(v,10),min=MODES[state.mode].min;state.guests=Math.max(min,Math.min(4000,Number.isFinite(n)?n:min));document.getElementById('guests').value=state.guests;}
+document.getElementById('g-minus').addEventListener('click',function(){setGuests(state.guests-5);render();});document.getElementById('g-plus').addEventListener('click',function(){setGuests(state.guests+5);render();});
+document.getElementById('guests').addEventListener('change',function(e){setGuests(e.target.value);render();});
+document.getElementById('city').addEventListener('change',render);document.getElementById('date').addEventListener('change',render);
 function total(){
-  var lines = [], perPerson = 0, protG = 0, p = pkg();
-  if(p){
-    perPerson = p.price; protG = p.g;
-    lines.push({name:"Paquete " + p.name, sub:p.g + " g de proteína por persona", val:p.price * state.guests});
-  } else {
-    allItems().forEach(function(it){
-      if(!state.picked[it.id]) return;
-      perPerson += it.price;
-      if(it.cat === "platos") protG += it.per.g;
-      var sub = it.per.g
-        ? it.per.g + " g por plato · " + kg(it.per.g, state.guests)
-        : it.per.u + (it.per.u === 1 ? " pieza" : " piezas") + " por plato · " + (it.per.u * state.guests) + " piezas";
-      lines.push({name:it.name, sub:sub, val:it.price * state.guests});
-    });
-  }
-  var extrasTotal = 0, xlines = [];
-  EXTRAS.forEach(function(x){
-    var q = state.extras[x.id] || 0; if(!q) return;
-    extrasTotal += q * x.price;
-    xlines.push({name:x.name + (x.qty ? " × " + q : ""), sub:"", val:q * x.price});
-  });
-  var food = perPerson * state.guests;
-  return {perPerson:perPerson, food:food, extrasTotal:extrasTotal, total:food + extrasTotal,
-          lines:lines, xlines:xlines, count:lines.length, protG:protG, pkg:p};
+ var lines=[],xlines=[],pending=[],minPending=[],food=0,extrasTotal=0,protG=0;
+ var m=MODES[state.mode];
+ if(state.mode==='tiempos'){lines.push({name:m.name,sub:state.guests+' invitados · precio por persona y mínimo por confirmar',val:null});pending.push(m.name);}
+ if(state.mode==='hamburguesas'||state.mode==='chili'){var units=state.mode==='hamburguesas'?'hamburguesas':'chili dogs';var v=m.price*state.guests;food+=v;lines.push({name:m.name,sub:state.guests+' '+units+' × '+money(m.price)+' por unidad',val:v});}
+ if(state.mode==='parrillero'){food+=200;lines.push({name:m.name,sub:'Tarifa fija · ingredientes a cargo del cliente',val:200});if(document.getElementById('city').value!=='San Cristóbal'){lines.push({name:'Traslado fuera de San Cristóbal',sub:'Costo adicional según destino',val:null});pending.push('Traslado');}}
+ allItems().forEach(function(it){
+  var q=state.picked[it.id];if(!q)return;var entry=it.cat==='entradas';if(!entry&&state.mode!=='carta')return;
+  var sub=entry?(it.batch?q+' bandeja'+(q===1?'':'s')+' de 50 · '+(q*50)+' unidades':(it.unit==='por confirmar'?'Cantidad y presentación a definir':q+' unidades')):it.per.g+' g por plato · '+state.guests+' platos';
+  var val=it.price===null?null:it.price*(entry?q:state.guests);
+  if(entry&&it.min===null){sub+=' · mínimo por confirmar';minPending.push(it.name);}
+  if(val===null)pending.push(it.name);else food+=val;
+  if(it.cat==='platos')protG+=it.per.g;
+  lines.push({name:it.name,sub:sub,val:val});
+ });
+ EXTRAS.forEach(function(x){var q=state.extras[x.id]||0;if(!q)return;var val=x.price===null?null:q*x.price;if(val===null)pending.push(x.name);else extrasTotal+=val;xlines.push({name:x.name+(x.qty?' × '+q:''),sub:'Adicional',val:val});});
+ return {lines:lines,xlines:xlines,pending:pending,minPending:minPending,food:food,extrasTotal:extrasTotal,total:food+extrasTotal,protG:protG,count:lines.length};
 }
-
 function render(){
-  var t = total();
-  var advOn = EXTRAS.filter(function(x){ return x.adv && (state.extras[x.id] || 0) > 0; }).length;
-  var cntEl = document.getElementById("xadv-count");
-  cntEl.textContent = advOn; cntEl.classList.toggle("on", advOn > 0);
-  if (advOn > 0) { document.getElementById("xadv").classList.add("on"); document.getElementById("xadv-btn").setAttribute("aria-expanded", "true"); }
-  Array.prototype.forEach.call(document.querySelectorAll(".xrow"), function(row){
-    var q = state.extras[row.dataset.id] || 0;
-    row.classList.toggle("is-on", q > 0);
-    var qEl = row.querySelector("[data-qty]"); if(qEl) qEl.textContent = q;
-    var tick = row.querySelector(".tick i"); if(tick) tick.style.opacity = q > 0 ? "1" : "0";
-  });
-
-  var extraTag = t.xlines.length ? " + " + t.xlines.length + (t.xlines.length === 1 ? " extra" : " extras") : "";
-  document.getElementById("sum-title").textContent = t.pkg
-    ? "Paquete " + t.pkg.name + " · " + state.guests + " invitados" + extraTag
-    : (t.count ? t.count + " plato" + (t.count === 1 ? "" : "s") + " · " + state.guests + " invitados" + extraTag : (t.xlines.length ? "Solo extras · " + state.guests + " invitados" : "Sin menú seleccionado"));
-
-  var html = "";
-  if(!t.count && !t.xlines.length){
-    html = '<div class="sum-empty">Elige un paquete o toca los platos del menú para armar tu cotización.</div>';
-  } else {
-    t.lines.forEach(function(l){
-      html += '<div class="sum-line"><span>' + l.name + (l.sub ? '<em>' + l.sub + '</em>' : '') + '</span><span>' + money0(l.val) + '</span></div>';
-    });
-    t.xlines.forEach(function(l){
-      html += '<div class="sum-line"><span>' + l.name + '</span><span>' + money0(l.val) + '</span></div>';
-    });
-  }
-  document.getElementById("sum-lines").innerHTML = html;
-  document.getElementById("sum-key").innerHTML = t.protG
-    ? '<span>Proteína estimada<em>' + t.protG + ' g por plato · ' + ((t.protG >= 350 && t.protG <= 450) ? "dentro del rango recomendado" : "revisar: rango recomendado 350–450 g") + '</em></span><span>' + kg(t.protG, state.guests) + '</span>'
-    : '';
-  document.getElementById("sum-total").textContent = t.total ? money0(t.total) : "—";
-  document.getElementById("sum-per").innerHTML = t.total
-    ? (t.count
-        ? "≈ " + money(t.total / state.guests) + " por plato<br>" + state.guests + " invitados"
-        : "solo adicionales<br>" + state.guests + " invitados")
-    : "Elige tu menú<br>para ver el estimado";
-  document.getElementById("m-total").textContent = t.total ? money0(t.total) : "—";
-
-  var msg = ["COTIZAR — EntreCortes",
-    "Fecha: " + fechaLarga(document.getElementById("date").value),
-    "Ciudad: " + document.getElementById("city").value,
-    "Invitados: " + state.guests,
-    "Menú: " + (t.pkg ? "Paquete " + t.pkg.name : (t.lines.map(function(l){ return l.name; }).join(", ") || "por definir"))];
-  if(t.protG) msg.push("Proteína estimada: " + kg(t.protG, state.guests) + " (" + t.protG + " g por plato)");
-  if(t.xlines.length) msg.push("Adicionales: " + t.xlines.map(function(l){ return l.name; }).join(", "));
-  if (t.total > 0) {
-    msg.push("Estimado: " + money0(t.total) + (t.count ? " (≈ " + money(t.total / state.guests) + " por plato)" : " (solo adicionales, sin menú)"));
-  } else {
-    msg.push("Quiero una cotización para mi evento.");
-  }
-  var url = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg.join("\n"));
-  ["wa","wa2","wa3","wafloat"].forEach(function(id){ var el = document.getElementById(id); if(el) el.href = url; });
+ var m=MODES[state.mode],t=total();
+ document.getElementById('lab-guests').textContent=m.label;document.getElementById('guest-hint').textContent=m.hint;document.getElementById('guests').min=m.min;
+ var chosen=state.mode==='tiempos';document.getElementById('choose-tiempos').textContent=chosen?'Cinco tiempos elegido ✓ · Cotizar':'Elegir cinco tiempos y cotizar';document.getElementById('choose-tiempos').setAttribute('aria-pressed',String(chosen));
+ document.querySelectorAll('.mod-card').forEach(function(card){card.classList.toggle('is-on',card.querySelector('[data-mode]').dataset.mode===state.mode);});
+ var adv=EXTRAS.filter(function(x){return x.adv&&(state.extras[x.id]||0)>0;}).length;document.getElementById('xadv-count').textContent=adv;document.getElementById('xadv-count').classList.toggle('on',adv>0);
+ if(adv>0){document.getElementById('xadv').classList.add('on');document.getElementById('xadv-btn').setAttribute('aria-expanded','true');}
+ document.querySelectorAll('.xrow').forEach(function(row){var q=state.extras[row.dataset.id]||0;row.classList.toggle('is-on',q>0);var qel=row.querySelector('[data-qty]');if(qel)qel.textContent=q;row.querySelector('.tick i').style.opacity=q>0?'1':'0';});
+ document.getElementById('sum-title').textContent=t.count?m.name:(t.xlines.length?'Adicionales seleccionados':'Sin menú seleccionado');
+ var html='';t.lines.concat(t.xlines).forEach(function(l){html+='<div class="sum-line"><span>'+l.name+'<em>'+l.sub+'</em></span><span>'+(l.val===null?'Por cotizar':money(l.val))+'</span></div>';});
+ if(!t.count&&!t.xlines.length)html='<div class="sum-empty">Elige un servicio o añade opciones del menú. Cada entrada se calcula por su propia cantidad.</div>';
+ if(t.pending.length)html+='<p class="pending-price">Cotización incompleta: '+t.pending.join(', ')+'. El chef confirma estos importes; no están incluidos en el subtotal.</p>';
+ if(t.minPending.length)html+='<p class="pending-min">Mínimos de las entradas seleccionadas: confirmar con el chef.</p>';
+ document.getElementById('sum-lines').innerHTML=html;
+ document.getElementById('sum-key').innerHTML=t.protG?'<span>Proteína estimada<em>'+t.protG+' g por plato</em></span><span>'+kg(t.protG,state.guests)+'</span>':'';
+ document.querySelector('.summary > .lab').textContent=t.pending.length?'Subtotal conocido':'Tu cotización estimada';
+ document.getElementById('sum-total').textContent=t.total?money(t.total):'—';
+ document.getElementById('sum-per').innerHTML=t.pending.length?'No es el total final<br>Hay importes por confirmar':(t.total?'Según unidades y servicios<br>Confirmación final del chef':'Elige tu servicio o menú<br>para cotizar');
+ document.getElementById('m-total').textContent=t.total?money(t.total):'—';document.querySelector('.mbar .m-lab').textContent=t.pending.length?'Subtotal conocido':'Estimado';
+ var msg=['COTIZAR — EntreCortes','Fecha: '+fechaLarga(document.getElementById('date').value),'Ciudad: '+document.getElementById('city').value,'Servicio: '+m.name,m.label+': '+state.guests];
+ t.lines.concat(t.xlines).forEach(function(l){msg.push(l.name+': '+l.sub+' · '+(l.val===null?'precio por confirmar':money(l.val)));});
+ if(t.total)msg.push((t.pending.length?'Subtotal conocido (NO es el total final): ':'Estimado: ')+money(t.total));
+ if(t.pending.length)msg.push('Falta cotizar: '+t.pending.join(', ')+'.');
+ if(t.minPending.length)msg.push('Confirmar mínimos de entradas: '+t.minPending.join(', ')+'.');
+ if(state.mode==='carta')msg.push('Precios del resto del menú y extras sujetos a confirmación.');
+ if(state.mode==='tiempos')msg.push('Confirmar las proteínas, los cortes, las guarniciones y el mínimo de invitados para cinco tiempos.');
+ msg.push('Quiero confirmar disponibilidad y la cotización final con el chef.');
+ var url='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(msg.join('\n'));
+ ['wa','wa2','wa3'].forEach(function(id){var el=document.getElementById(id);if(el){el.href=url;el.target='_blank';el.rel='noopener noreferrer';}});
 }
 
 // marquee
-var strip = ["Aperitivos","Platos fuertes","Acompañantes","Ensaladas","Ahumados en barril","Coffee breaks","Eventos corporativos","San Cristóbal · Táchira"];
+var strip = ["Entradas","Asados por tiempos","Platos fuertes","Acompañantes","Ensaladas","Ahumados en barril","Coffee breaks","Eventos corporativos","San Cristóbal · Táchira"];
 var piece = strip.map(function(s){ return "<span>" + s + "<i>◆</i></span>"; }).join("");
 document.getElementById("marquee").innerHTML = piece + piece;
 
-renderPkgs(); renderMenu(); render();
+renderMenu(); render();
 </script>
 <script id="fxjs">
 (function(){
@@ -1119,9 +1117,9 @@ renderPkgs(); renderMenu(); render();
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') lb.classList.remove('on'); });
 })();
 </script>
-<a class="wafloat" id="wafloat" href="#cotizador" aria-label="Cotizar por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.06c-.24.68-1.42 1.31-1.96 1.36-.54.05-1.05.24-3.53-.73-2.98-1.17-4.86-4.24-5.01-4.44-.15-.2-1.19-1.58-1.19-3.02 0-1.43.75-2.14 1.02-2.43.27-.29.58-.36.78-.36.2 0 .39.01.56.01.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.2-.15.32-.29.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.29.75 1.24 1.61 2.01 1.11.99 2.04 1.3 2.33 1.44.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.2-.29.39-.24.66-.15.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.12.07.71-.17 1.39z"/></svg>
-  <span class="wlab">Cotizar por WhatsApp</span>
+<a class="wafloat chef-float" id="chef-help" href="https://wa.me/584147201370?text=Hola%20chef%2C%20no%20s%C3%A9%20qu%C3%A9%20pedir.%20%C2%BFMe%20ayudas%20a%20elegir%20para%20mi%20evento%3F" target="_blank" rel="noopener noreferrer" aria-label="¿No sabes qué pedir? Pregúntale al chef por WhatsApp">
+  <span class="chef-avatar"><img src="img/chef-avatar.webp" alt="" width="48" height="48"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.5-1.2A9 9 0 1 0 12 3zm-3 5c.4 0 .5.2.7.7l.6 1.4c.1.3 0 .5-.4.9-.2.2-.2.4 0 .7.6 1 1.4 1.8 2.4 2.4.3.2.5.2.7 0l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.2.4.4.3.7-.2.9-.9 1.4-1.9 1.4-1.3 0-3.2-.9-4.8-2.6C8 12.4 7.3 11 7.3 9.9c0-1 .7-1.9 1.7-1.9z"/></svg></span>
+  <span class="wlab"><span>¿No sabes qué pedir?</span><strong>Pregúntale al chef <span aria-hidden="true">↗</span></strong></span>
 </a>
 
 <script id="fx10">
